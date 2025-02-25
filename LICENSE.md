@@ -22,4 +22,8 @@ THIS SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPL
 ## 6. Enforcement  
 Violations of this license may result in legal action. Unauthorized commercial use or restricted modifications may require licensing agreements directly with the project maintainers.
 
+🚫 "This project cannot be used for commercial services, SaaS, or enterprise applications."
+🚫 "Multi-agent orchestration is prohibited in open-source forks. Only CoreAI intelligence adjustments are allowed."
+🚫 "All modifications must be shared under the same license and cannot be monetized."
+
 For inquiries regarding commercial licensing, please contact sajijohnmiranda@gmail.com.
