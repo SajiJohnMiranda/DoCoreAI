@@ -13,7 +13,7 @@ Whether you're building a chatbot, a virtual assistant, or a SaaS application, *
 
 ## 🌍 Why DynamicCoreAI?  
 ### ✅ **Key Benefits**
-- **🧠 Smarter AI** – Enhances reasoning, logic, and decision-making.
+- **🧠 Smarter AI** – Enhances reasoning, problem-solving, and adaptability.
 - **⚡ Faster Responses** – Optimized prompts mean quicker, more accurate answers.
 - **🔧 Full Control** – Developers can fine-tune intelligence parameters like depth, creativity, and accuracy.
 - **🔌 Easy API Integration** – Works seamlessly with OpenAI, Cohere, Mistral, and other LLMs.
@@ -25,7 +25,9 @@ Whether you're building a chatbot, a virtual assistant, or a SaaS application, *
 
 ### **🔗 Step-by-Step Workflow:**
 1️⃣ **User Query →** A user submits a question/query to your application.  
-2️⃣ **DynamicCoreAI Enhances Prompt →** The system analyzes the query and generates an optimized prompt with the best intelligence parameters.  
+2️⃣ **DynamicCoreAI Enhances Prompt →** The system analyzes the query and generates an optimized prompt with the best intelligence parameters.     _Optional Parameters:_
+    User role, domain, and output format are supported but optional
+
 3️⃣ **Send to LLM →** The refined prompt is sent to your preferred LLM (OpenAI, Anthropic, Cohere, etc.).  
 4️⃣ **LLM Response →** The model returns a highly optimized answer.  
 5️⃣ **Final Output →** Your application displays the AI’s enhanced response to the user.  
@@ -45,6 +47,8 @@ Whether you're building a chatbot, a virtual assistant, or a SaaS application, *
 - **📝 AI-Powered Content Generation** – Enhance blogs, marketing copy, and technical writing.
 - **🧪 Research & Experimentation** – Test and build **next-gen AI applications**.  
 
+Generalized solution:
+_Easily Works across all domains and user roles, allowing fine-tuning for different applications_
 ---
 
 ## 🎯 Getting Started
@@ -87,7 +91,7 @@ curl -X POST "http://localhost:5000/optimize" -d '{"query": "Explain Quantum Com
 ---
 
 ## ⚖️ License
-Licensed under [CUSTOM License](./LICENSE.md). Use freely, contribute, and enhance AI for everyone! *Non-commercial usage only. 🚀  
+Licensed under [MIT License](./LICENSE.md). Use freely, contribute, and enhance AI for everyone!  🚀  
 
 ---
 
