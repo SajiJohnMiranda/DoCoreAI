@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+langchain
+openai
+pydantic
+python-dotenv
+groq
