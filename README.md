@@ -25,7 +25,7 @@ Whether you're building a chatbot, a virtual assistant, or a SaaS application, *
 
 ### **🔗 Step-by-Step Workflow:**
 1️⃣ **User Query →** A user submits a question/query to your application.  
-2️⃣ **DynamicCoreAI Enhances Prompt →** The system analyzes the query or prompt and generates an optimized prompt with **dynamic intelligence parameters**. The degree of intelligence for each these parameters (like **Reasoning** - Determines logical depth, **Creativity** - Adjusts randomness , **Precision** - Controls specificity)  are inferred from the query automatically. 
+2️⃣ **DynamicCoreAI Enhances Prompt →** The system analyzes the query or prompt and generates an optimized prompt with **dynamic intelligence parameters**. The required intelligence range  for each these parameters (like **Reasoning** - Determines logical depth, **Creativity** - Adjusts randomness , **Precision** - Controls specificity)  are inferred from the query automatically. 
 
 3️⃣ **Send to LLM →** The refined prompt is sent to your preferred LLM (OpenAI, Anthropic, Cohere, etc.).  
 4️⃣ **LLM Response →** The model returns a highly optimized answer.  
