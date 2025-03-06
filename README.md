@@ -31,10 +31,10 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 
   The Solution:
 
-    DynamicCoreAI solves this by intelligently adjusting prompt parameters based on context, ensuring:
-    ✅ Better response accuracy
-    ✅ Improved AI agent adaptability
-    ✅ Optimized decision-making and creativity when needed
+  DynamicCoreAI solves this by intelligently adjusting prompt parameters based on context, ensuring:
+  ✅ Better response accuracy
+  ✅ Improved AI agent adaptability
+  ✅ Optimized decision-making and creativity when needed
 
 ---
 
@@ -47,8 +47,9 @@ DynamicCoreAI follows a structured process to enhance AI prompts:
 3️⃣ Prompt Optimization – Fine-tunes the input prompt using optimized intelligence properties.  
 4️⃣ LLM Execution – Sends the enhanced prompt to OpenAI, Groq, or other supported models.
 
-💡 Example:**Before** DynamicCoreAI: "Summarize this report."
-           **After** DynamicCoreAI: "Summarize this report with high precision (0.9), low creativity (0.2), and deep reasoning (0.8)."
+💡 Example:  
+**Before** DynamicCoreAI: "Summarize this report."  
+**After** DynamicCoreAI: "Summarize this report with high precision (0.9), low creativity (0.2), and deep reasoning (0.8)."
 
 ### **🔗 Step-by-Step Workflow:**
 1️⃣ **User Query →** A user submits a question/query to your application.  
@@ -64,11 +65,11 @@ DynamicCoreAI follows a structured process to enhance AI prompts:
 
 ## 💡 How DynamicCoreAI Helps AI Agents
 
-DynamicCoreAI ensures that AI agents perform at their best by customizing intelligence settings per task. Here’s how:
+DynamicCoreAI ensures that AI agents perform at their best by customizing intelligence settings per task. Here’s how:  
 
-📞 Support Agent AI → Needs high empathy, clarity, and logical reasoning.
-📊 Data Analyst AI → Requires high precision and deep analytical reasoning.
-🎨 Creative Writing AI → Boosts creativity for idea generation and storytelling.
+📞 Support Agent AI → Needs high empathy, clarity, and logical reasoning.  
+📊 Data Analyst AI → Requires high precision and deep analytical reasoning.  
+🎨 Creative Writing AI → Boosts creativity for idea generation and storytelling.  
 
 This adaptive approach ensures that LLMs deliver role-specific, optimized responses every time.
 
@@ -146,7 +147,7 @@ DynamicCoreAI is designed to work seamlessly with major AI platforms:
 ---
 
 ## 🌟 Join the Community:  
-Let’s build the future of AI-powered intelligence tuning together! 🚀
+Let’s build the future of AI-powered intelligence tuning together! 🚀  
 🤝 **Contribute:** Open issues, create pull requests, and help improve DynamicCoreAI!  
 📢 **Discuss & Collaborate:** Join our **Discord & GitHub Discussions**.  
 🌟 **Star the Repo!** If you find this useful, don’t forget to star ⭐ it on GitHub!  
