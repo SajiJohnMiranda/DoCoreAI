@@ -88,6 +88,7 @@ DynamicCoreAI is highly versatile and can be integrated across various domains:
 - **🤖 AI Agents, Chatbots & Virtual Assistants** – Make AI interactions **more natural and helpful**.
 - **📞 AI Customer Support** – Improve support accuracy, reducing agent workload.
 - **📊 Data & Market Analysis** – Extract **meaningful insights from unstructured data**.
+- **🎨 Creative AI: Enhances storytelling, content generation, and brainstorming.
 
 ### 🛠️ **For Developers & Engineers:**
 - **⚙️ Fine-Tuning Custom LLMs** – Boost reasoning, logic, and adaptability.
