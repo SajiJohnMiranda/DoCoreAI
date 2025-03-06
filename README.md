@@ -130,7 +130,7 @@ DynamicCoreAI is designed to work seamlessly with major AI platforms:
 
 ---
 
-📈 Why Developers Should Use DynamicCoreAI
+## 📈 Why Developers Should Use DynamicCoreAI
 
 🔹 Smarter AI, Better Results  
 -Ensures AI models understand the intelligence scope required for each task.  
@@ -142,7 +142,7 @@ DynamicCoreAI is designed to work seamlessly with major AI platforms:
 
 🔹 Ideal for SaaS & AI-driven Applications  
 -Perfect for chatbots, AI assistants, automation, and enterprise AI solutions.  
--🚀 DynamicCoreAI transforms AI interactions by making prompts truly intelligent.
+-DynamicCoreAI transforms AI interactions by making prompts truly intelligent.
 
 ---
 
@@ -157,9 +157,9 @@ Let’s build the future of AI-powered intelligence tuning together! 🚀
 ---
 
 ## ⚖️ License
-Licensed under [MIT License](./LICENSE.md). Use freely, contribute, and enhance AI for everyone!  🚀  
+Licensed under [MIT License](./LICENSE.md). Use freely, contribute, and enhance AI for everyone!    
 
 ---
 
-💡 **Let’s revolutionize AI prompt optimization together!** 🚀🔥
+💡 **Let’s revolutionize AI prompt optimization together!** 🚀
 
