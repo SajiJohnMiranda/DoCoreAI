@@ -157,6 +157,16 @@ Let’s build the future of AI-powered intelligence tuning together! 🚀
 
 👉 [GitHub Repo](https://github.com/SajiJohnMiranda/DynamicCoreAI) | [Docs (Coming Soon)]  
 
+
+## Recommended LLMs for Intelligence Optimization
+CoreAI is designed to refine and optimize user prompts by dynamically adjusting intelligence parameters such as reasoning, creativity, and precision. To achieve the best results, we recommend using ChatGPT (GPT-4-turbo) for this task.
+While CoreAI is compatible with other LLMs (e.g., LLaMA 3, Claude etc), results may vary depending on the model’s capabilities. Developers are encouraged to experiment and contribute insights on different LLM integrations.
+
+**Future Support for Fine-Tuned Models**
+We recognize the growing demand for fine-tuned open-source models tailored for specific applications. In future updates, we aim to explore Integration with fine-tuned LLaMA/Custom GPT models, Support for locally deployed models (via Ollama, vLLM, etc.) & Customization of intelligence parameters based on domain-specific data.
+
+Our vision is to make CoreAI adaptable to both proprietary and open-source AI models, ensuring flexibility for all developers. Contributions and suggestions are welcome!
+
 ---
 
 ## ⚖️ License
