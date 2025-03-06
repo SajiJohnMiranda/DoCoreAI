@@ -18,9 +18,9 @@ With finely-tuned prompts, developers can build LLM-powered applications, autono
 
 
 class PromptRequest(BaseModel):
-    prompt: str = Field(..., example="How can AI improve healthcare?")
+    prompt: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")
     manual_mode: bool = Field(False, example=False, description="Enable manual input mode")
-    #role: bool = Field(None, example="Doctor", description="Role of LLM")
+    role: bool = Field(None, example="Technical Support Executive", description="Role of LLM")
     #reasoning: float = Field(0.7, example=0.7, description="Logical depth (0.1 = simple, 1.0 = deep)")
     #creativity: float = Field(0.6, example=0.6, description="Randomness level (0.1 = strict, 1.0 = freeform)")
     #precision: float = Field(0.8, example=0.8, description="Specificity (0.1 = vague, 1.0 = ultra-detailed)")
@@ -48,7 +48,7 @@ def optimize_prompt_endpoint(request: PromptRequest):
         **Example Input:**
         ```json
         {
-            "prompt": "How can AI improve healthcare?",
+            "prompt": "Can you walk me through how to connect my laptop to this new network?",
             "manual_mode": false
         }
         ```
@@ -56,7 +56,7 @@ def optimize_prompt_endpoint(request: PromptRequest):
         **Example Response:**
         ```json
         {
-            "prompt": "How can AI improve healthcare?",
+            "prompt": "Can you walk me through how to connect my laptop to this new network?",
             "reasoning": 0.7,
             "creativity": 0.6,
             "precision": 0.8,
