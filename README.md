@@ -32,9 +32,9 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
   The Solution:
 
   DynamicCoreAI solves this by intelligently adjusting prompt parameters based on context, ensuring:
-  ✅ Better response accuracy
-  ✅ Improved AI agent adaptability
-  ✅ Optimized decision-making and creativity when needed
+  - Better response accuracy
+  - Improved AI agent adaptability
+  - Optimized decision-making and creativity when needed
 
 ---
 
@@ -88,7 +88,7 @@ DynamicCoreAI is highly versatile and can be integrated across various domains:
 - **🤖 AI Agents, Chatbots & Virtual Assistants** – Make AI interactions **more natural and helpful**.
 - **📞 AI Customer Support** – Improve support accuracy, reducing agent workload.
 - **📊 Data & Market Analysis** – Extract **meaningful insights from unstructured data**.
-- **🎨 Creative AI: Enhances storytelling, content generation, and brainstorming.
+- **🎨 Creative AI** –  Enhances storytelling, content generation, and brainstorming.
 
 ### 🛠️ **For Developers & Engineers:**
 - **⚙️ Fine-Tuning Custom LLMs** – Boost reasoning, logic, and adaptability.
