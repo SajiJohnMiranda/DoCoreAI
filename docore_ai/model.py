@@ -64,7 +64,7 @@ def optimize_prompt(prompt: str, manual_mode: bool = False, reasoning: float = N
    
     chat_completion = client.chat.completions.create(
             messages=messages,
-            model="llama-3.1-8b-instant",
+            model="llama3-8b-8192",
             temperature=temperature if temperature is not None else (1.0 - reasoning if manual_mode else 0.7)            
         )       
 

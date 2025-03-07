@@ -1,3 +1,5 @@
+# This file needs to be deleted later as we will be relying on api\main.py
+
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 from core_ai.model import optimize_prompt

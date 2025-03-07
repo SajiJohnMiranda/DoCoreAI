@@ -1,4 +1,4 @@
-# DynamicCoreAI License  
+# DoCoreAI License  
 
 ## 1. License Grant  
 This software is open-source and provided under the **MIT License**, with additional restrictions for SaaS and multi-agent implementations.  
