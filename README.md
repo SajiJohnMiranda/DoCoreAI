@@ -5,7 +5,7 @@
 ---
 
 ## 🔥 What is DoCoreAI?  
-DoCoreAI is an AI **intelligence tuner that optimizes prompts dynamically** based on predefined intelligence parameters. Instead of relying on generic LLM prompts, DoCoreAI customizes intelligence properties (such as reasoning, creativity, and precision) to ensure AI agents generate responses that perfectly align with their roles.
+DoCoreAI is an AI **intelligence profiler that optimizes prompts dynamically** based on predefined intelligence parameters. Instead of relying on generic LLM prompts, DoCoreAI customizes intelligence properties (such as reasoning, creativity, and precision) to ensure AI agents generate responses that perfectly align with their roles.
 
 Its an **open-source powerhouse** designed to make **Large Language Models (LLMs) smarter, sharper, and more efficient**. It acts as a **plug-and-play optimizer** that dynamically enhances AI reasoning, problem-solving, and decision-making, giving developers total control over AI intelligence. 
 
@@ -16,7 +16,7 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 ## 🌍 Why DoCoreAI?  
 ### ✅ **Key Benefits**
 - **🧠 Smarter AI** – Enhances reasoning, problem-solving, and adaptability.
-- **⚡ Faster Responses** – Optimized prompts mean quicker, more accurate answers.
+- **⚡ Best Responses** – Intelligent prompts mean more accurate answers.
 - **🔧 Full Control** – Developers can fine-tune intelligence parameters like depth, creativity, and accuracy.
 - **🔌 Easy API Integration** – Works seamlessly with OpenAI, Cohere, Mistral, and other LLMs.
 - **🛠️ Open-Source & Extensible** – Customize it for your specific use case.
@@ -114,11 +114,11 @@ pip install -r requirements.txt
 ```
 3️⃣ Run DoCoreAI:
 ```bash
-python core_ai.py
+uvicorn api.main:app
 ```
 4️⃣ Start using the API:
 ```bash
-curl -X POST "http://localhost:5000/optimize" -d '{"query": "Explain Quantum Computing in simple terms."}'
+Browser POST "http://127.0.0.1:8000/docs" Select /intelligence-profiler-demo 
 ```
 
 🎉 **You're all set to build smarter AI applications!**  
@@ -159,13 +159,13 @@ Let’s build the future of AI-powered intelligence tuning together! 🚀
 
 
 ## Recommended LLMs for Intelligence Optimization
-CoreAI is designed to refine and optimize user prompts by dynamically adjusting intelligence parameters such as reasoning, creativity, and precision. To achieve the best results, we recommend using ChatGPT (GPT-4-turbo) for this task.
-While CoreAI is compatible with other LLMs (e.g., LLaMA 3, Claude etc), results may vary depending on the model’s capabilities. Developers are encouraged to experiment and contribute insights on different LLM integrations.
+DoCoreAI is designed to refine and optimize user prompts by dynamically adjusting intelligence parameters such as reasoning, creativity, and precision. To achieve the best results, we recommend using ChatGPT (GPT-4-turbo) for this task.
+While DoCoreAI is compatible with other LLMs (e.g., LLaMA 3, Claude etc), results may vary depending on the model’s capabilities. Developers are encouraged to experiment and contribute insights on different LLM integrations.
 
 **Future Support for Fine-Tuned Models:**  
 We recognize the growing demand for fine-tuned open-source models tailored for specific applications. In future updates, we aim to explore Integration with fine-tuned LLaMA/Custom GPT models, Support for locally deployed models (via Ollama, vLLM, etc.) & Customization of intelligence parameters based on domain-specific data.
 
-Our vision is to make CoreAI adaptable to both proprietary and open-source AI models, ensuring flexibility for all developers. Contributions and suggestions are welcome!
+Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI models, ensuring flexibility for all developers. Contributions and suggestions are welcome!
 
 ---
 

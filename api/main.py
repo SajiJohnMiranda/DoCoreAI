@@ -1,44 +1,88 @@
-from fastapi import FastAPI
+import json
+import re
+from typing import Optional
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-#from core_ai.model import optimize_prompt
+from docore_ai.model import intelligence_profiler
+from docore_ai.demo_model import intelligence_profiler_demo
+from fastapi.openapi.utils import get_openapi
+from fastapi import Header
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("api.main:app", host="127.0.0.1", port=8000, reload=True)
 
 app = FastAPI(
-    title="CoreAI API",
-    description="""🚀 Empower Your AI Agents with Contextually Smart Prompts! 
-CoreAI API transforms ordinary prompts into intelligent, context-aware queries infused with reasoning, creativity, and precision.
-With finely-tuned prompts, developers can build LLM-powered applications, autonomous AI agents, and smarter decision-making systems.
+    title="DoCoreAI API",
+    description="""🚀 Elevate Your AI’s Intelligence with Contextually Smart Responses!  
+The DoCoreAI API analyzes prompts and **profiles the intelligence parameters** required to generate effective responses.  
+By optimizing reasoning, creativity, and precision, it ensures that **AI-driven applications produce more relevant, insightful, and impactful outputs**.  
 
-💡 Why Use CoreAI API?
-✅ Enhance Prompt Intelligence – Get better AI-generated responses across LLMs.
-✅ Plug & Play with Any LLM – Works seamlessly with OpenAI, Anthropic, Mistral, etc.
-✅ Optimized for Agentic AI – Enable smarter decision-making in AI-driven workflows.
-✅ Developer-Friendly & Scalable – FastAPI-powered, blazing-fast, and easy to integrate.""",
-    version="1.0"
+💡 **Why Use DoCoreAI's Intelligence Profiler?**  
+✅ **Unlock AI Intelligence** – Get structured intelligence parameters for optimized responses.  
+✅ **Seamless LLM Integration** – Works effortlessly with OpenAI, Groq, Anthropic, Mistral, and more.  
+✅ **Optimized for Agentic AI** – Enhance decision-making in autonomous AI workflows.  
+✅ **Developer-Friendly & Scalable** – FastAPI-powered, efficient, and easy to integrate.""",    version="1.0"
 )
 
 
 class PromptRequest(BaseModel):
-    prompt: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")
-    manual_mode: bool = Field(False, example=False, description="Enable manual input mode")
-    role: bool = Field(None, example="Technical Support Agent", description="Role of LLM")
-    #reasoning: float = Field(0.7, example=0.7, description="Logical depth (0.1 = simple, 1.0 = deep)")
-    #creativity: float = Field(0.6, example=0.6, description="Randomness level (0.1 = strict, 1.0 = freeform)")
-    #precision: float = Field(0.8, example=0.8, description="Specificity (0.1 = vague, 1.0 = ultra-detailed)")
-    #temperature: float = Field(None, example=0.7, description="Optional override for AI temperature")    
+    user_content: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")
+    #manual_mode: bool = Field(False, example=False, description="Enable manual input mode")
+    role: str = Field(None, example="Technical Support Agent", description="Role of LLM")
+    #reasoning: Optional[float] = Field(None, example=0.7, description="Logical depth (0.1 = simple, 1.0 = deep)")
+    #creativity: Optional[float] = Field(None, example=0.6, description="Randomness level (0.1 = strict, 1.0 = freeform)")
+    #precision: Optional[float] = Field(None, example=0.8, description="Specificity (0.1 = vague, 1.0 = ultra-detailed)")
+    #temperature: Optional[float] = Field(None, example=0.7, description="Optional override for AI temperature")
 
 
 @app.get("/", summary="Welcome to CoreAI Endpoint")
 def home():
     return {"message": "Welcome to CoreAI API. Use /docs for more info."}
 
-@app.post("/optimize-prompt", summary="""🎯 Transform Standard Prompts into AI-Optimized Queries for Smarter Responses!
-This endpoint dynamically enhances prompts by injecting reasoning, creativity, and precision, making them more effective for LLMs and Agentic AI applications.""")
-def optimize_prompt_endpoint(request: PromptRequest):
+#@app.get("/live", summary="Health Check Endpoint")
+#def health_check():
+#    return {"status": "running"}
+
+@app.post("/intelligence_profiler", summary="Optimize a given prompt",  include_in_schema=False)
+def intelligence_profiler_live(request: PromptRequest):
+    print("Received raw request data:", request)  # Print the raw data
+
+    '''if request.manual_mode: # Not Tested - Pass all parameters if manual_mode is True
+        optimized_prompt = intelligence_profiler(
+            user_content=request.user_content,
+            #manual_mode=request.manual_mode,
+            role=request.role,
+            #reasoning=request.reasoning, -ToDO
+            #creativity=request.creativity, -ToDO
+            #precision=request.precision, -ToDO
+            #temperature=request.temperature -ToDO
+        )
+    else:'''
+        # Pass only prompt, manual_mode, and role if manual_mode is False
+    optimized_prompt = intelligence_profiler(
+        user_content=request.user_content,
+        role=request.role
+    )
+
+    return {"intelligence_profile":optimized_prompt}
+
+
+
+class DemoPromptRequest(BaseModel):
+    user_content: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")
+    manual_mode: bool = Field(False, example=False, description="Enable manual input mode")
+    role: str = Field(None, example="Technical Support Agent", description="Role of LLM")
+
+@app.post("/intelligence-profiler-demo", summary="""🎯 Optimize Your Prompts for Smarter AI Responses!
+This endpoint enhances standard prompts by dynamically injecting reasoning, creativity, and precision, making them more effective for LLMs and Agentic AI applications.""")
+def intelligence_profiler_swagger_demo(request: DemoPromptRequest, groq_api_key: str = Header(None, description="Groq API Token")):
         """
         This endpoint enhances a given prompt with AI intelligence properties 
         such as reasoning, creativity, and precision.
 
-        - **prompt**: The original input text.
+        - **user_content**: The original input text.
+        - **role**: The role or designation of the Agent.
         - **manual_mode**: Enables manual input adjustments.
         - **reasoning**: Logical depth (higher means more detailed reasoning).
         - **creativity**: Adjusts randomness and freeform nature of the response.
@@ -48,37 +92,57 @@ def optimize_prompt_endpoint(request: PromptRequest):
         **Example Input:**
         ```json
         {
-            "prompt": "Can you walk me through how to connect my laptop to this new network?",
+            "user_content": "Can you walk me through how to connect my laptop to this new network?",
+            "role": "Technical Support Agent",
             "manual_mode": false,
-            "role": "Technical Support Agent"
-
         }
         ```
 
         **Example Response:**
         ```json
         {
-            "prompt": "Can you walk me through how to connect my laptop to this new network?",
             "reasoning": 0.7,
             "creativity": 0.6,
             "precision": 0.8,
-            "temperature": 0.7
-        }
+            "temperature": 0.7,
+        }        
         ```
+
+        ### **What’s Happening Here?**  
+        - The **LLM evaluates the complexity** of the query {user_content} and determines the optimal intelligence parameters needed for the best response.  
+
+        ### **Why Is This Useful for AI Projects?**  
+        - When **{user_content}** is combined with the **calibrated intelligence parameters**, the prompt becomes significantly more effective.  
+        - AI models will **generate more precise, context-aware, and useful responses** instead of generic answers.  
+        - This approach **reduces hallucination** and improves AI-driven decision-making in real-world applications.  
+
+        **How to Use:**
+        - Enter the Groq API token in the "Authorize" section.
+        - Input request parameters in the request body.
+        - Click "Try it Out" to test.
+
+        ### **🚀 Ready to See It in Action?**  
+        ✅ **Fork the repo** and start experimenting instantly!  
+        ✅ **Try the live API** and witness how AI intelligence optimization works in real time.  
+        🔗 *https://github.com/SajiJohnMiranda/DoCoreAI* 
+
         """
-        return {
-            "prompt": request.prompt,
-            "reasoning": 0.7,
-            "creativity": 0.6,
-            "precision": 0.8,
-            "temperature": 0.7
+        if not groq_api_key:
+            raise HTTPException(status_code=400, detail="Groq API Token is required for demo mode.")
+
+        optimized_prompt = intelligence_profiler_demo(
+            user_content=request.user_content,
+            manual_mode=False,
+            role=request.role,
+            model_provider="groq",  
+            groq_api_key =groq_api_key
+            #temperature=0.3  # Keep default demo temperature                       
+        )
+
+
+        return {"intelligence_profile": optimized_prompt,
+                "model_provider": "groq",
+                "groq_token_received": bool(groq_api_key)  # Confirm token received
         }
+        
 
-
-'''from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to CoreAI! - main.py"}'''
