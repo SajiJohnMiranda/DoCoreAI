@@ -12,7 +12,7 @@ DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "groq")  # demo uses 'groq'
 
 
 
-def intelligence_profiler_demo(user_content: str, role: str, manual_mode: bool = False, reasoning: float = None, 
+def intelligence_profiler_demo(user_content: str, role: str, reasoning: float = None, 
                     creativity: float = None, precision: float = None, temperature: float = None, 
                     model_provider: str = DEFAULT_MODEL,groq_api_key: str = None
                     ) -> str:
@@ -44,7 +44,7 @@ def intelligence_profiler_demo(user_content: str, role: str, manual_mode: bool =
             **Return only the JSON response and no additional text.**
                 """
     messages = [
-        {"role": "system", "content": "\n".join(system_message)} if not manual_mode else None,
+        {"role": "system", "content": "\n".join(system_message)} , #if not manual_mode else None,
         {"role": "user", "content": f'User Input: {user_message}\nRole: Intelligence Evaluator'}
                 ]
     messages = [msg for msg in messages if msg]  # Remove None values
@@ -53,7 +53,7 @@ def intelligence_profiler_demo(user_content: str, role: str, manual_mode: bool =
     chat_completion = client.chat.completions.create(
             messages=messages,
             model="gemma2-9b-it",
-            temperature=temperature if temperature is not None else (1.0 - reasoning if manual_mode else 0.7)            
+            temperature=0.3 # if temperature is not None else (1.0 - reasoning if manual_mode else 0.7)            
         )       
     response_text = chat_completion.choices[0].message.content  # Extract response
     return response_text

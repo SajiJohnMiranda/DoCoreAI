@@ -71,7 +71,7 @@ def intelligence_profiler_live(request: PromptRequest):
 
 class DemoPromptRequest(BaseModel):
     user_content: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")
-    manual_mode: bool = Field(False, example=False, description="Enable manual input mode")
+    #manual_mode: bool = Field(False, example=False, description="Enable manual input mode")
     role: str = Field(None, example="Technical Support Agent", description="Role of LLM")
 
 @app.post("/intelligence-profiler-demo", summary="""🎯 Optimize Your Prompts for Smarter AI Responses!
@@ -83,7 +83,6 @@ def intelligence_profiler_swagger_demo(request: DemoPromptRequest, groq_api_key:
 
         - **user_content**: The original input text.
         - **role**: The role or designation of the Agent.
-        - **manual_mode**: Enables manual input adjustments.
         - **reasoning**: Logical depth (higher means more detailed reasoning).
         - **creativity**: Adjusts randomness and freeform nature of the response.
         - **precision**: Determines specificity (higher means more detailed responses).
@@ -94,7 +93,6 @@ def intelligence_profiler_swagger_demo(request: DemoPromptRequest, groq_api_key:
         {
             "user_content": "Can you walk me through how to connect my laptop to this new network?",
             "role": "Technical Support Agent",
-            "manual_mode": false,
         }
         ```
 
@@ -132,7 +130,7 @@ def intelligence_profiler_swagger_demo(request: DemoPromptRequest, groq_api_key:
 
         optimized_prompt = intelligence_profiler_demo(
             user_content=request.user_content,
-            manual_mode=False,
+            #manual_mode=False,
             role=request.role,
             model_provider="groq",  
             groq_api_key =groq_api_key
