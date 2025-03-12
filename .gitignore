@@ -3,7 +3,7 @@ setup.py
 
 # Ignore dist/ folder and its contents
 dist/
-
+*.egg-info/
 
 # Ignore the temp folder
 temp/
