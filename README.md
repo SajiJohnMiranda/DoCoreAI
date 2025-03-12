@@ -104,6 +104,12 @@ DoCoreAI is highly versatile and can be integrated across various domains:
 
 ## 🎯 Getting Started
 ### **📌 Installation**
+You can install `docoreai` from PyPI using pip:
+
+```bash
+pip install docoreai
+```
+
 1️⃣ Clone the repo:
 ```bash
  git clone https://github.com/SajiJohnMiranda/DoCoreAI.git
