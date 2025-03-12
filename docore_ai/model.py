@@ -5,11 +5,14 @@ import requests
 from dotenv import load_dotenv
 from groq import Groq
 
+if not os.path.exists(".env"):
+    raise FileNotFoundError("⚠️ Missing .env file! Please create one with API keys. Refer to the README.")
+
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "groq")  # Default to groq
-MODEL = os.getenv("MODEL", "gemma2-9b-it")  # Default to gemma2-9b-it
+DEFAULT_MODEL = os.getenv("DEFAULT_MODEL")  # Default to groq
+MODEL = os.getenv("MODEL")  # Default to gemma2-9b-it
 
 
 def intelligence_profiler(user_content: str, role: str, model_provider: str = DEFAULT_MODEL, model_name: str = MODEL) -> str:

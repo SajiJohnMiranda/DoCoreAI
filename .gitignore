@@ -3,3 +3,17 @@ setup.py
 
 # Ignore dist/ folder and its contents
 dist/
+
+
+# Ignore the temp folder
+temp/
+
+# Ignore log files
+*.log
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore environment files
+.env

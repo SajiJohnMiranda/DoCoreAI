@@ -13,6 +13,11 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/SajiJohnMiranda/DoCoreAI",  # Update with your repo URL    
+    project_urls={
+        "Documentation": "https://your-docs-url.com",
+        "Blog Post": "https://mobilights.medium.com/intelligent-prompt-optimization-bac89b64fa84",
+        "Source Code": "https://github.com/SajiJohnMiranda/DoCoreAI",
+    },        
     packages=find_packages(),
     install_requires=[
         "uvicorn",
@@ -29,3 +34,4 @@ setup(
     ],
     python_requires=">=3.7",    
 )
+print("\n✅ Installation complete! Please create a `.env` file in your root folder. Refer to the README for details.\n")

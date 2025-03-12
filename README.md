@@ -157,6 +157,7 @@ Let’s build the future of AI-powered intelligence tuning together! 🚀
 
 👉 [GitHub Repo](https://github.com/SajiJohnMiranda/DoCoreAI) | [Docs (Coming Soon)]  
 
+---
 
 ## Recommended LLMs for Intelligence Optimization
 DoCoreAI is designed to refine and optimize user prompts by dynamically adjusting intelligence parameters such as reasoning, creativity, and precision. To achieve the best results, we recommend using ChatGPT (GPT-4-turbo) for this task.
@@ -166,6 +167,18 @@ While DoCoreAI is compatible with other LLMs (e.g., LLaMA 3, Claude etc), result
 We recognize the growing demand for fine-tuned open-source models tailored for specific applications. In future updates, we aim to explore Integration with fine-tuned LLaMA/Custom GPT models, Support for locally deployed models (via Ollama, vLLM, etc.) & Customization of intelligence parameters based on domain-specific data.
 
 Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI models, ensuring flexibility for all developers. Contributions and suggestions are welcome!
+
+---
+## Setup Instructions
+
+After installing `docoreai`, create a `.env` file in the root directory with the following content:
+
+```ini
+# .env file
+OPENAI_API_KEY="your-openai-api-key"
+GROQ_API_KEY="your-groq-api-key"
+DEFAULT_MODEL="openai"  # Choose 'openai' or 'groq'
+MODEL='gpt-3.5-turbo' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc
 
 ---
 

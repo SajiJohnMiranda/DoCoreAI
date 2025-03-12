@@ -5,6 +5,9 @@ Summary: DoCoreAI is an intelligence profiler that optimizes prompts
 Home-page: https://github.com/SajiJohnMiranda/DoCoreAI
 Author: Saji John
 Author-email: sajijohnmiranda@gmail.com
+Project-URL: Documentation, https://your-docs-url.com
+Project-URL: Blog Post, https://mobilights.medium.com/intelligent-prompt-optimization-bac89b64fa84
+Project-URL: Source Code, https://github.com/SajiJohnMiranda/DoCoreAI
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
@@ -23,6 +26,7 @@ Dynamic: classifier
 Dynamic: description
 Dynamic: description-content-type
 Dynamic: home-page
+Dynamic: project-url
 Dynamic: requires-dist
 Dynamic: requires-python
 Dynamic: summary
