@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+setup.py
+docore_ai/__init__.py
+docore_ai/demo_model.py
+docore_ai/model.py
+docoreai.egg-info/PKG-INFO
+docoreai.egg-info/SOURCES.txt
+docoreai.egg-info/dependency_links.txt
+docoreai.egg-info/requires.txt
+docoreai.egg-info/top_level.txt

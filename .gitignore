@@ -1,0 +1,5 @@
+# Ignore setup.py (if you don't want to track it)
+setup.py
+
+# Ignore dist/ folder and its contents
+dist/
