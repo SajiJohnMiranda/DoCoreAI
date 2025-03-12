@@ -169,7 +169,7 @@ We recognize the growing demand for fine-tuned open-source models tailored for s
 Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI models, ensuring flexibility for all developers. Contributions and suggestions are welcome!
 
 ---
-## Setup Instructions
+## How to set it up
 
 After installing `docoreai`, create a `.env` file in the root directory with the following content:
 
@@ -179,7 +179,7 @@ OPENAI_API_KEY="your-openai-api-key"
 GROQ_API_KEY="your-groq-api-key"
 DEFAULT_MODEL="openai"  # Choose 'openai' or 'groq'
 MODEL='gpt-3.5-turbo' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc
-
+```
 ---
 
 ## ⚖️ License
