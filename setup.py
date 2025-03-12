@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="docoreai",
-    version="0.1.0",
+    version="0.1.1",
     author="Saji John",
     author_email="sajijohnmiranda@gmail.com",
     description="DoCoreAI is an intelligence profiler that optimizes prompts",
