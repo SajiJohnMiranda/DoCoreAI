@@ -50,9 +50,9 @@ git push origin feature-name
 
 ---
 
-🚨 Important Rules from the Ruleset:
-✅ At least 1 approval is required before merging.
-✅ If new changes are pushed after approval, a fresh review is needed.
+🚨 Important Rules from the Ruleset:  
+✅ At least 1 approval is required before merging.  
+✅ If new changes are pushed after approval, a fresh review is needed.  
 ✅ Only PR-based merges are allowed (no direct pushes to main).
 ---
 ## 📢 6. Wait for Review & Merge
@@ -82,4 +82,3 @@ Happy coding! 🎉
 - **Location:** Root directory (`/CONTRIBUTING.md`)  
 - **Purpose:** Guides contributors on how to fork, branch, commit, push, and open a PR while following repository rules.  
 - **Ruleset Alignment:** Enforces **PR-based merging, review approvals, and linear commit history**.  
-
