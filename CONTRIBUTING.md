@@ -17,12 +17,10 @@ Fetch the latest updates from main:
 ```
 git checkout main
 git pull origin main
-
 ```
 Create a new branch for your feature/fix:
 ```
 git checkout -b feature-name
-
 ```
 ---
 ## 💻 3. Make Your Changes
@@ -38,16 +36,15 @@ git commit -m "Added feature-name: brief description"
 Push your branch to GitHub:
 ```
 git push origin feature-name
-
 ```
 ---
-##🔁 5. Open a Pull Request (PR)
-🔁 5. Open a Pull Request (PR)
+## 🔁 5. Open a Pull Request (PR)
+
 1. Go to Pull Requests.
 2. Click "New Pull Request".
 3. Select:
- - Base Branch: main
- - Compare Branch: feature-name
+    - Base Branch: main
+    - Compare Branch: feature-name
 4. Provide a clear description of your changes.
 5. Click "Create Pull Request".
 
@@ -70,7 +67,6 @@ git checkout main
 git pull origin main
 git fetch upstream
 git merge upstream/main
-
 ```
 🎯 You’re All Set!
 We appreciate your contributions to DoCoreAI! 🚀
