@@ -104,11 +104,12 @@ DoCoreAI is highly versatile and can be integrated across various domains:
 
 ## 🎯 Getting Started
 ### **📌 Installation**
-You can install `docoreai` from PyPI using pip: and Quick test Sample Code at ./blob/main/tests/Quick%20Test/test.py
+You can install `docoreai` from PyPI using pip: and Quick test [Sample Code](./blob/main/tests/Quick%20Test/test.py)
 
 ```bash
 pip install docoreai
 ```
+OR
 
 1️⃣ Clone the repo:
 ```bash
@@ -175,6 +176,14 @@ We recognize the growing demand for fine-tuned open-source models tailored for s
 Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI models, ensuring flexibility for all developers. Contributions and suggestions are welcome!
 
 ---
+
+## Finally Why DoCoreAI?
+
+- It **quantifies prompt intelligence** instead of relying on trial-and-error prompts.
+- AI **responds efficiently** when guided by reasoning, creativity, and precision metrics.
+
+---
+
 ## How to set it up
 
 After installing `docoreai`, create a `.env` file in the root directory with the following content:

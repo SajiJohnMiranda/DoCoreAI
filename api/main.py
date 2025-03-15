@@ -3,7 +3,8 @@ import re
 from typing import Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from docore_ai.model import intelligence_profiler
+from docore_ai.model import intelligence_profiler,normal_prompt, normal_prompt_with_intelligence
+from docore_ai.saas import comb_intelligence_profiler
 from docore_ai.demo_model import intelligence_profiler_demo
 from fastapi.openapi.utils import get_openapi
 from fastapi import Header
@@ -25,48 +26,61 @@ By optimizing reasoning, creativity, and precision, it ensures that **AI-driven 
 ✅ **Developer-Friendly & Scalable** – FastAPI-powered, efficient, and easy to integrate.""",    version="1.0"
 )
 
-
 class PromptRequest(BaseModel):
     user_content: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")
-    #manual_mode: bool = Field(False, example=False, description="Enable manual input mode")
     role: str = Field(None, example="Technical Support Agent", description="Role of LLM")
-    #reasoning: Optional[float] = Field(None, example=0.7, description="Logical depth (0.1 = simple, 1.0 = deep)")
-    #creativity: Optional[float] = Field(None, example=0.6, description="Randomness level (0.1 = strict, 1.0 = freeform)")
-    #precision: Optional[float] = Field(None, example=0.8, description="Specificity (0.1 = vague, 1.0 = ultra-detailed)")
-    #temperature: Optional[float] = Field(None, example=0.7, description="Optional override for AI temperature")
 
+class PromptRequest_Intelli(BaseModel):
+    user_content: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")
+    role: str = Field(None, example="Technical Support Agent", description="Role of LLM")
+    reasoning: Optional[float] = Field(None, example=0.7, description="Logical depth (0.1 = simple, 1.0 = deep)")
+    creativity: Optional[float] = Field(None, example=0.6, description="Randomness level (0.1 = strict, 1.0 = freeform)")
+    precision: Optional[float] = Field(None, example=0.8, description="Specificity (0.1 = vague, 1.0 = ultra-detailed)")
+    temperature: Optional[float] = Field(None, example=0.7, description="Optional override for AI temperature")
 
 @app.get("/", summary="Welcome to CoreAI Endpoint")
 def home():
     return {"message": "Welcome to CoreAI API. Use /docs for more info."}
 
-#@app.get("/live", summary="Health Check Endpoint")
-#def health_check():
-#    return {"status": "running"}
+@app.post("/normal_prompt", summary="Give a normal prompt",  include_in_schema=False)
+def normal_prompt_live(request: PromptRequest):
+
+    normal_prompt_response = normal_prompt(
+        user_content=request.user_content,
+        role=request.role
+    )
+    return {"normal_response":normal_prompt_response}
+
+@app.post("/normal_prompt_plus_intelli", summary="Give a normal prompt with intelli",  include_in_schema=False)
+def normal_prompt_live_intelli(request: PromptRequest_Intelli):
+
+    optimal_prompt_response = normal_prompt_with_intelligence(
+        user_content=request.user_content,
+        role=request.role,
+        reasoning=request.reasoning,
+        creativity=request.creativity,
+        precision=request.precision,
+        temperature=request.temperature
+    )
+    return {"optimal_response":optimal_prompt_response}
 
 @app.post("/intelligence_profiler", summary="Optimize a given prompt",  include_in_schema=False)
 def intelligence_profiler_live(request: PromptRequest):
-    print("Received raw request data:", request)  # Print the raw data
 
-    '''if request.manual_mode: # Not Tested - Pass all parameters if manual_mode is True
-        optimized_prompt = intelligence_profiler(
-            user_content=request.user_content,
-            #manual_mode=request.manual_mode,
-            role=request.role,
-            #reasoning=request.reasoning, -ToDO
-            #creativity=request.creativity, -ToDO
-            #precision=request.precision, -ToDO
-            #temperature=request.temperature -ToDO
-        )
-    else:'''
-        # Pass only prompt, manual_mode, and role if manual_mode is False
     optimized_prompt = intelligence_profiler(
         user_content=request.user_content,
         role=request.role
     )
-
     return {"intelligence_profile":optimized_prompt}
 
+@app.post("/comb_intelligence_profiler", summary="Single Step Prompt Combined with Intelligence",  include_in_schema=False)
+def normal_prompt_live_comb(request: PromptRequest):
+
+    comb_prompt_response = comb_intelligence_profiler(
+        user_content=request.user_content,
+        role=request.role
+    )
+    return {"singlestep_combined_prompt_response":comb_prompt_response}
 
 
 class DemoPromptRequest(BaseModel):
@@ -144,3 +158,6 @@ def intelligence_profiler_swagger_demo(request: DemoPromptRequest, groq_api_key:
         }
         
 
+#@app.get("/live", summary="Health Check Endpoint")
+#def health_check():
+#    return {"status": "running"}

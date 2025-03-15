@@ -1,7 +1,8 @@
+import json
 import os
+import re
 from typing import Optional
 import openai
-import requests
 from dotenv import load_dotenv
 from groq import Groq
 
@@ -11,20 +12,16 @@ if not os.path.exists(".env"):
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-DEFAULT_MODEL = os.getenv("DEFAULT_MODEL")  # Default to groq
-MODEL = os.getenv("MODEL")  # Default to gemma2-9b-it
+MODEL_PROVIDER = os.getenv("MODEL_PROVIDER")  #'openai' , 'groq' etc
+MODEL_NAME = os.getenv("MODEL_NAME")  # gpt-3.5-turbo, gemma2-9b-it 
 
+def clean_string(s: str) -> str:
+    return re.sub(r'\\n|\n|\\|"', '', s)
 
-def intelligence_profiler(user_content: str, role: str, model_provider: str = DEFAULT_MODEL, model_name: str = MODEL) -> str:
+def intelligence_profiler(user_content: str, role: str, model_provider: str = MODEL_PROVIDER, model_name: str = MODEL_NAME) -> str:
     
-    #if manual_mode: # TODO -- manual_mode option can generate efficient prompts based on intelligence params given with input user_content & role 
-    #    reasoning = max(0.1, min(1.0, reasoning)) if reasoning is not None else 0.5
-    #    creativity = max(0.1, min(1.0, creativity)) if creativity is not None else 0.5
-    #    precision = max(0.1, min(1.0, precision)) if precision is not None else 0.5
-
     system_message = """
     You are an AI Intelligence Profiler. Your task is to analyze a user's request and determine the optimal intelligence parameters needed for an effective response. The parameters to be evaluated are:
-
     - **reasoning** (0.1 to 1.0): The level of logical depth required.
     - **creativity** (0.1 to 1.0): The degree of imaginative variation required.
     - **precision** (0.1 to 1.0): The specificity level required.
@@ -33,19 +30,12 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = DE
     **Instructions:**
     1. Analyze the user's request and consider the specified role.
     2. Adjust the intelligence parameters based on the query's complexity and the typical expertise required for that role.
-    3. **Return ONLY a JSON object** in the exact format below, with no extra text or explanation:
-
-    {
-        "reasoning": <value>,
-        "creativity": <value>,
-        "precision": <value>,
-        "temperature": <value>
-    }
+    3. **Return ONLY a JSON object** in the exact format below with no extra text or explanation:
+    { "reasoning": <value>, "creativity": <value>, "precision": <value>, "temperature": <value> }
     """
     user_message = f"""
     User Request: "{user_content}"
     Role: "{role}"
-   
 
     Please evaluate the above information and return the intelligence parameters in the specified JSON format.
     """
@@ -60,26 +50,27 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = DE
         response = openai.Client().chat.completions.create(
             model=model_name,
             messages=messages,
-            temperature=0.4
+            temperature=0.3
         )
-        return response.choices[0].message.content
+        content = response.choices[0].message.content
+        usage = response.usage  # Extract token usage
+        return {"response": content, "usage": usage}  # Return both content and usage
     elif model_provider == "groq":
         client = Groq(api_key=GROQ_API_KEY) 
-        chat_completion = client.chat.completions.create(
+        response = client.chat.completions.create(
             messages=messages,
             model=model_name,
             temperature=0.2 #temperature if temperature is not None else (1.0 - reasoning if manual_mode else 0.7)            
         )       
-        response_text = chat_completion.choices[0].message.content  # Extract response
-        return response_text
-    
-def normal_prompt(user_content: str, role: str, model_provider: str = DEFAULT_MODEL, model_name: str = MODEL):
-    """
-    Sends a normal prompt to the selected LLM (OpenAI or Groq) without intelligence parameters.
+        content = response.choices[0].message.content  # Extract response
+        usage = response.usage  # Extract token usage
+        return {"response": content, "usage": usage}  # Return both content and usage
+        #return clean_string(response_text)
+def normal_prompt(user_content: str, role: str, model_provider: str = MODEL_PROVIDER, model_name: str = MODEL_NAME, temperature: float = 0.3):
+    """  Sends a normal prompt to the selected LLM (OpenAI or Groq) without intelligence parameters.
     """
     system_message = f"""
-    You are a {role}. Respond to user queries based on your role expertise.
-    Provide a well-structured response based on best practices in your field.
+    You are a {role}. Respond to query: {user_content} based on your expertise.
     """
 
     messages = [
@@ -87,17 +78,17 @@ def normal_prompt(user_content: str, role: str, model_provider: str = DEFAULT_MO
         {"role": "user", "content": user_content}
     ]
 
-    response = call_llm_without_temp(model_provider, model_name, messages)
-    return response
+    response = call_llm(model_provider, model_name, messages, temperature)
+    #content = response.choi  ## Extract response
+    #usage = response.usage  # Extract token usage
+    return response #{"response": content, "usage": usage}  # Return both content and usage
 
-def normal_prompt_with_intelligence(user_content: str, role: str, model_provider: str = DEFAULT_MODEL, model_name: str = MODEL, reasoning: float = 0.5, creativity: float = 0.5, precision: float = 0.5, temperature: float = 0.5):
+def normal_prompt_with_intelligence(user_content: str, role: str, reasoning: float, creativity: float, precision: float, temperature: float, model_provider: str = MODEL_PROVIDER, model_name: str = MODEL_NAME):
     """
     Sends a prompt to the selected LLM with intelligence parameters.
     """
     system_message = f"""
-    You are a {role}. Respond to user queries based on your role expertise.
-    Provide a well-structured response based on best practices in your field.
-    Adjust the response style dynamically based on intelligence parameters:
+    You are a {role}. Respond to {user_content}.Adjust the response style dynamically based on intelligence parameters:
     - Reasoning: {reasoning} (0.1 = simple, 1.0 = deep and structured)
     - Creativity: {creativity} (0.1 = factual, 1.0 = imaginative)
     - Precision: {precision} (0.1 = broad, 1.0 = highly detailed)
@@ -109,7 +100,9 @@ def normal_prompt_with_intelligence(user_content: str, role: str, model_provider
     ]
 
     response = call_llm(model_provider, model_name, messages, temperature)
-    return response
+    #content = response.choices[0].message.content  # Extract response
+    #usage = response.usage  # Extract token usage
+    return response # Return both content and usage
 
 def call_llm(model_provider: str, model_name: str, messages: list, temperature: float):
     """
@@ -121,7 +114,10 @@ def call_llm(model_provider: str, model_name: str, messages: list, temperature: 
             messages=messages,
             temperature=temperature
         )
-        return response.choices[0].message.content
+        content = response.choices[0].message.content
+        usage = response.usage  # Extract token usage
+        return {"response": content, "usage": usage}  # Return both content and usage
+
 
     elif model_provider == "groq":
         # Implement Groq API call (replace with actual implementation)
@@ -131,21 +127,25 @@ def call_llm(model_provider: str, model_name: str, messages: list, temperature: 
             model=model_name,
             temperature=temperature #temperature if temperature is not None else (1.0 - reasoning if manual_mode else 0.7)            
         )
-        return f"Simulated Groq response for model: {model_name}, Temp: {temperature}"
+        content = chat_completion.choices[0].message.content  # Extract response
+        usage = chat_completion.usage  # Extract token usage
+        return {"response": content, "usage": usage}  # Return both content and usage
 
     else:
         raise ValueError("Invalid model provider. Choose 'openai' or 'groq'.")
 
 def call_llm_without_temp(model_provider: str, model_name: str, messages: list):
-    """
-    Calls OpenAI or Groq API without specifying temperature, so it defaults to the model's own value.
+    """  Calls OpenAI or Groq API without specifying temperature, so it defaults to the model's own value.
     """
     if model_provider == "openai":
         response = openai.Client().chat.completions.create(
             model=model_name,
             messages=messages
         )
-        return response.choices[0].message.content
+        content = response.choices[0].message.content  # Extract response
+        usage = response.usage  # Extract token usage
+        return {"response": content, "usage": usage}  # Return both content and usage
+
 
     elif model_provider == "groq":
         client = Groq(api_key=GROQ_API_KEY) 
@@ -153,7 +153,10 @@ def call_llm_without_temp(model_provider: str, model_name: str, messages: list):
             messages=messages,
             model=model_name,
         )
-        return f"Simulated Groq response for model: {model_name} (Using default LLM temperature)"
+        content = chat_completion.choices[0].message.content  # Extract response
+        usage = chat_completion.usage  # Extract token usage
+        return {"response": content, "usage": usage}  # Return both content and usage
 
     else:
         raise ValueError("Invalid model provider. Choose 'openai' or 'groq'.")
+
