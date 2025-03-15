@@ -192,8 +192,8 @@ After installing `docoreai`, create a `.env` file in the root directory with the
 # .env file
 OPENAI_API_KEY="your-openai-api-key"
 GROQ_API_KEY="your-groq-api-key"
-DEFAULT_MODEL="openai"  # Choose 'openai' or 'groq'
-MODEL='gpt-3.5-turbo' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc
+MODEL_PROVIDER="openai"  # Choose 'openai' or 'groq'
+MODEL_NAME='gpt-3.5-turbo' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc
 ```
 ---
 
