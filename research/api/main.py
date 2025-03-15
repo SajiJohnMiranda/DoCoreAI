@@ -1,8 +1,11 @@
+#Only for Research work & not relevant for app execution
 from typing import Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
+from research.docore_ai_research import intelligence_profiler,normal_prompt, normal_prompt_with_intelligence
 from docore_ai.model import intelli_profiler
 from docore_ai.demo_model import intelligence_profiler_demo
+from fastapi.openapi.utils import get_openapi
 from fastapi import Header
 
 if __name__ == "__main__":
@@ -23,21 +26,60 @@ By optimizing reasoning, creativity, and precision, it ensures that **AI-driven 
 )
 
 class PromptRequest(BaseModel):
-    user_content: str = Field(..., example="Can you help me to connect my laptop to wifi?")
+    user_content: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")
     role: str = Field(None, example="Technical Support Agent", description="Role of LLM")
+
+class PromptRequest_Intelli(BaseModel):
+    user_content: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")
+    role: str = Field(None, example="Technical Support Agent", description="Role of LLM")
+    reasoning: Optional[float] = Field(None, example=0.7, description="Logical depth (0.1 = simple, 1.0 = deep)")
+    creativity: Optional[float] = Field(None, example=0.6, description="Randomness level (0.1 = strict, 1.0 = freeform)")
+    precision: Optional[float] = Field(None, example=0.8, description="Specificity (0.1 = vague, 1.0 = ultra-detailed)")
+    temperature: Optional[float] = Field(None, example=0.7, description="Optional override for AI temperature")
 
 @app.get("/", summary="Welcome to CoreAI Endpoint")
 def home():
     return {"message": "Welcome to CoreAI API. Use /docs for more info."}
 
-@app.post("/intelli_profiler", summary="Give a prompt with intelligence paramters",  include_in_schema=False)
-def prompt_live_intelli_profiler(request: PromptRequest):
+@app.post("/normal_prompt", summary="Give a normal prompt",  include_in_schema=False)
+def normal_prompt_live(request: PromptRequest):
 
-    optimal_response = intelli_profiler(
+    normal_prompt_response = normal_prompt(
+        user_content=request.user_content,
+        role=request.role
+    )
+    return {"normal_response":normal_prompt_response}
+
+@app.post("/normal_prompt_plus_intelli", summary="Give a normal prompt with intelli",  include_in_schema=False)
+def normal_prompt_live_intelli(request: PromptRequest_Intelli):
+
+    optimal_prompt_response = normal_prompt_with_intelligence(
         user_content=request.user_content,
         role=request.role,
+        reasoning=request.reasoning,
+        creativity=request.creativity,
+        precision=request.precision,
+        temperature=request.temperature
     )
-    return {"optimal_response":optimal_response}
+    return {"optimal_response":optimal_prompt_response}
+
+@app.post("/intelligence_profiler", summary="Optimize a given prompt",  include_in_schema=False)
+def intelligence_profiler_live(request: PromptRequest):
+
+    optimized_prompt = intelligence_profiler(
+        user_content=request.user_content,
+        role=request.role
+    )
+    return {"intelligence_profile":optimized_prompt}
+
+@app.post("/comb_intelligence_profiler", summary="Single Step Prompt Combined with Intelligence",  include_in_schema=False)
+def normal_prompt_live_comb(request: PromptRequest):
+
+    comb_prompt_response = comb_intelligence_profiler(
+        user_content=request.user_content,
+        role=request.role
+    )
+    return {"singlestep_combined_prompt_response":comb_prompt_response}
 
 
 class DemoPromptRequest(BaseModel):
@@ -70,7 +112,6 @@ def intelligence_profiler_swagger_demo(request: DemoPromptRequest, groq_api_key:
         **Example Response:**
         ```json
         {
-            "Response" : "Sure! Right click on the icon that displays network, and then.....",
             "reasoning": 0.7,
             "creativity": 0.6,
             "precision": 0.8,

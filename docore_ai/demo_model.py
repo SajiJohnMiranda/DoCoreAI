@@ -1,3 +1,4 @@
+# DEMO --- DEMO --- DEMO --- Works only with Groq
 import os
 from typing import Optional
 import openai
@@ -16,35 +17,38 @@ def intelligence_profiler_demo(user_content: str, role: str, reasoning: float = 
                     creativity: float = None, precision: float = None, temperature: float = None, 
                     model_provider: str = DEFAULT_MODEL,groq_api_key: str = None
                     ) -> str:
-    system_message = """
-                You are an AI that evaluates a user's request and determines the intelligence profile needed to respond effectively.
-                Given a request analyze the content's (both request and response) complexity and predict the required value between the specified range for the intelligence parameters of a person's role to answer 	    this query. The intelligence parameters to be evaluated are reasoning, creativity and precision.
-            **Return only the intelligence parameter values** in JSON format:",
-            {
-                    "reasoning": 0.1 - 1.0,  // How logically structured and in-depth the response should be. 0.1 = simple, 1.0 = deep and complex.
-                    "creativity": 0.1 - 1.0, // How much imaginative variation should be introduced. 0.1 = factual, 1.0 = highly creative.
-                    "precision": 0.1 - 1.0,  // How specific or general the response should be. 0.1 = broad, 1.0 = highly detailed.
-                    "temperature": 0.1 - 1.0, // Derived from above values
-            }
-            ### **Rules:**                    
-            The temperature should be automatically calculated dynamically based on the reasoning, creativity, and precision values.
-            Do not provide explanations, only return the JSON output.
-    """
-    user_message = """
-            Analyze the request: {user_content} and understand the complexity of this request and intelligence required for the best possible response.
-            Predict the right value between the specified range required for the intelligence parameters of a person's role {role} to answer this query.
 
-            Return them in the structured JSON format:
-            {
-                "reasoning": 0.1 - 1.0,
-                "creativity": 0.1 - 1.0,
-                "precision": 0.1 - 1.0,
-                "temperature": 0.1 - 1.0
-            }
-            **Return only the JSON response and no additional text.**
-                """
+    system_message = f"""
+        You are an expert AI assistant. First, analyze the user content and role to determine optimal intelligence parameters required to respond:
+        The intelligence parameters are:
+        1. Reasoning (0.1-1.0): Logical depth where 1.0 is max value
+        2. Creativity (0.1-1.0): Imagination level where 1.0 is max value
+        3. Precision (0.1-1.0): Specificity required where 1.0 is max value
+        
+
+        Based on these values, **derive the Temperature dynamically** as follows:
+        - If **Precision is high (≥0.8) and Creativity is low (≤0.2)** → **Temperature = 0.1 to 0.3** (Factual & Logical)
+        - If **Creativity is high (≥0.8) and Reasoning is low (≤0.3)** → **Temperature = 0.9 to 1.0** (Highly Creative)
+        - If **Balanced Creativity & Precision (0.4 - 0.7 range)** → **Temperature = 0.4 to 0.7** (Neutral or Conversational)
+
+        
+        You MUST generate responses using the derived temperature value dynamically, ensuring coherence with the intelligence profile.
+        Then, generate a response based on these parameters.  
+
+        Return **ONLY** the following JSON format:  
+        {{
+            "intelligence_profile": {{ "reasoning": <value>, "creativity": <value>, "precision": <value>, "temperature": <value> }},
+            "optimized_response": "<AI-generated response on {user_content} and your {role}>"
+        }}
+        Rule: Strictly Do not provide other content or explanations.
+    """
+    user_message = f"""
+    User Request: "{user_content}"
+    Role: "{role}"
+    """
+
     messages = [
-        {"role": "system", "content": "\n".join(system_message)} , #if not manual_mode else None,
+        {"role": "system", "content": "\n".join(system_message)} , 
         {"role": "user", "content": f'User Input: {user_message}\nRole: Intelligence Evaluator'}
                 ]
     messages = [msg for msg in messages if msg]  # Remove None values
@@ -53,7 +57,7 @@ def intelligence_profiler_demo(user_content: str, role: str, reasoning: float = 
     chat_completion = client.chat.completions.create(
             messages=messages,
             model="gemma2-9b-it",
-            temperature=0.3 # if temperature is not None else (1.0 - reasoning if manual_mode else 0.7)            
+            #temperature=1
         )       
     response_text = chat_completion.choices[0].message.content  # Extract response
     return response_text

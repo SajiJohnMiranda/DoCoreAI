@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Expose function 
-from .model import intelligence_profiler  # Developer -> from docore_ai import intelligence_profiler
+from docore_ai.model import intelli_profiler  # Developer -> from docore_ai import intelligence_profiler
 
 
 
