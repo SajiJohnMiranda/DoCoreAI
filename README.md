@@ -31,12 +31,15 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 
   - Generic prompts fail to define the intelligence level needed to perform a task efficiently when some tasks need high reasoning, low creativity, while others need high creativity, low precision..
 
+  - Saves Developer's Time from Trial & Error - Tweaking the Prompt and Temperature. (Here, the right temperature gets set automatically based on the prompt content, role & intelligent parameter values)
+
   The Solution:
 
   DoCoreAI solves this by intelligently adjusting skill parameters based on context, so LLMs generate perfect responses for each role, ensuring:
   - Better response accuracy
   - Improved AI agent adaptability
   - Optimized decision-making and creativity when needed
+  - Temperature get dynamically assigned
 
 ---
 

@@ -50,7 +50,7 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
         response = openai.Client().chat.completions.create(
             model=model_name,
             messages=messages,
-            #temperature=0.3 
+            #temperature=0.3 #DO NOT SET THE TEMPERATURE HERE!
         )
         content = response.choices[0].message.content
         usage = response.usage  # Extract token usage
@@ -60,7 +60,7 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
         response = client.chat.completions.create(
             messages=messages,
             model=model_name,
-            temperature=0.2 
+            #temperature=0.2 #DO NOT SET THE TEMPERATURE HERE!
         )       
         content = response.choices[0].message.content  
         usage = response.usage  # Extract token usage

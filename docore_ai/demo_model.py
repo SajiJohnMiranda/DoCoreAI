@@ -57,7 +57,7 @@ def intelligence_profiler_demo(user_content: str, role: str, reasoning: float = 
     chat_completion = client.chat.completions.create(
             messages=messages,
             model="gemma2-9b-it",
-            #temperature=1
+            #temperature=1 #DO NOT SET THE TEMPERATURE HERE!
         )       
     response_text = chat_completion.choices[0].message.content  # Extract response
     return response_text
