@@ -1,7 +1,7 @@
 from typing import Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from docore_ai.model import intelli_profiler
+from docore_ai.model import intelligence_profiler
 from docore_ai.demo_model import intelligence_profiler_demo
 from fastapi import Header
 
@@ -30,10 +30,10 @@ class PromptRequest(BaseModel):
 def home():
     return {"message": "Welcome to CoreAI API. Use /docs for more info."}
 
-@app.post("/intelli_profiler", summary="Give a prompt with intelligence paramters",  include_in_schema=False)
+@app.post("/intelligence_profiler", summary="Give a prompt with intelligence paramters",  include_in_schema=False)
 def prompt_live_intelli_profiler(request: PromptRequest):
 
-    optimal_response = intelli_profiler(
+    optimal_response = intelligence_profiler(
         user_content=request.user_content,
         role=request.role,
     )
