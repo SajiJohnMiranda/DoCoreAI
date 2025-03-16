@@ -46,10 +46,10 @@ DoCoreAI follows a structured process to enhance AI prompts:
 
 ---
 
-### 🔥 Before vs. After DoCoreAI
+### 🔥 Before vs. After DoCoreAI  
 
 
-| 🚀 Scenario         | ❌ Before DoCoreAI | ✅ After DoCoreAI |
+|   Scenario          | ❌ Before DoCoreAI | ✅ After DoCoreAI |
 |---------------------|------------------|------------------|
 | **Basic Query**     | `"Summarize this report."` | `"Summarize this report with high precision (0.9), low creativity (0.2), and deep reasoning (0.8)."` |
 | **Customer Support AI** | Responds generically, lacking empathy and clarity | Adjusts tone to be more empathetic and clear |
@@ -104,7 +104,7 @@ DoCoreAI is highly versatile and can be integrated across various domains:
 - **📝 AI-Powered Content Generation** – Enhance blogs, marketing copy, and technical writing.
 - **🧪 Research & Experimentation** – Test and build **next-gen AI applications**.  
 
-### 🍒 **Generalized solution for All**
+### 🍒 **Generalized Solution for All**
 - **⚙️ Easily Works across all domains and user roles, allowing fine-tuning for different applications
   
 ---
