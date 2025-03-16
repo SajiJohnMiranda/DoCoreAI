@@ -22,7 +22,7 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 - **Generic prompts yield unpredictable results** – No clear control over AI intelligence per task.  
 
 ### 🧩 **How DoCoreAI Solves This:**  
-✅ **Intelligence Profiling:** Automatically adjusts reasoning, creativity, precision, and temperature.  
+✅ **Intelligence Profiling:** Automatically adjusts reasoning, creativity, precision, and temperature for thr Role.  
 ✅ **Context Awareness:** Adapts AI responses to the role (e.g., customer support, data analyst, programmer etc..).  
 ✅ **Token Efficiency:** Reduces API costs by optimizing responses.
 
@@ -267,4 +267,5 @@ We’d love for developers to test it with different providers and share insight
 Response accuracy & depth – Does the AI follow optimized intelligence parameters effectively?  
 Creativity & structure – How well does it balance reasoning, precision, and creativity across different models?  
 Performance impact – Are there noticeable improvements in token efficiency and response relevance?  
-📢 Your feedback helps improve DoCoreAI! If you’ve tested it with Cohere, Groq, Mistral, or any other model, drop your findings in GitHub Discussions or open an Issue/PR with insights!
+📢 Your feedback helps improve DoCoreAI! If you’ve tested it with Cohere, Groq, Mistral, or any other model, drop your findings in GitHub Discussions or open an Issue/PR with insights!  
+[⭐this Repo](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)
