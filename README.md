@@ -5,15 +5,26 @@
 ---
 
 ## 🔥 What is DoCoreAI?  
-DoCoreAI is an AI **intelligence profiler that optimizes prompts dynamically** based on predefined intelligence parameters. Instead of relying on generic LLM prompts, DoCoreAI customizes intelligence properties (such as reasoning, creativity, and precision) to ensure AI agents generate responses that perfectly align with their roles.
+DoCoreAI is an AI **intelligence profiler that optimizes prompts dynamically** with intelligence parameters. Instead of relying on generic LLM prompts, DoCoreAI customizes intelligence properties (such as reasoning, creativity, and precision) to ensure AI agents generate responses that perfectly align with their roles.
 
-Its an **open-source powerhouse** designed to make **Large Language Models (LLMs) smarter, sharper, and more efficient**. It acts as a **plug-and-play optimizer** that dynamically enhances AI reasoning, problem-solving, and decision-making, giving developers total control over AI intelligence. 
+In Simple words - DoCoreAI is an AI intelligence optimizer that dynamically enhances language model (LLM) responses by adjusting reasoning, creativity, precision, and temperature based on the user role. This eliminates manual prompt engineering and ensures context-aware, role-specific responses for customer support, data analysis, and creative writing.
 
 Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS application, **DoCoreAI fine-tunes AI prompts in real time**, ensuring **clear, precise, and highly contextual responses**.  
 
 ---
 
 ## 🌍 Why DoCoreAI?  
+
+### 🚨 **The Problem with Standard AI Models:**  
+- LLMs lack role-based intelligence – A support bot should be empathetic, but a data bot needs precision.  
+- Trial-and-error tuning is inefficient – Developers waste time manually adjusting temperature and creativity.  
+- Generic prompts yield unpredictable results – No clear control over AI intelligence per task.  
+
+### **How DoCoreAI Solves This:**  
+✅ Intelligence Profiling: Automatically adjusts reasoning, creativity, precision, and temperature.  
+✅ Context Awareness: Adapts AI responses to the role (e.g., customer support vs. data analysis).  
+✅ Token Efficiency: Reduces API costs by optimizing responses.
+
 ### ✅ **Key Benefits**
 - **🧠 Smarter AI** – Enhances reasoning, problem-solving, and adaptability.
 - **⚡ Best Responses** – Intelligent prompts mean more accurate answers.
@@ -21,40 +32,51 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 - **🔌 Easy API Integration** – Works seamlessly with OpenAI, Cohere, Mistral, and other LLMs.
 - **🛠️ Open-Source & Extensible** – Customize it for your specific use case.
 
-  🚨Lets see some Problems:
-
-  - Generic LLM prompts don’t tell AI agents how smart to be for a task.
-
-  - LLMs respond the same way to different tasks, often lacking role-specific intelligence.
-
-  - A customer support AI should be empathetic and clear, while a data analyst AI should be logical and precise.
-
-  - Generic prompts fail to define the intelligence level needed to perform a task efficiently when some tasks need high reasoning, low creativity, while others need high creativity, low precision..
-
-  - Saves Developer's Time from Trial & Error - Tweaking the Prompt and Temperature. (Here, the right temperature gets set automatically based on the prompt content, role & intelligent parameter values)
-
-  The Solution:
-
-  DoCoreAI solves this by intelligently adjusting skill parameters based on context, so LLMs generate perfect responses for each role, ensuring:
-  - Better response accuracy
-  - Improved AI agent adaptability
-  - Optimized decision-making and creativity when needed
-  - Temperature get dynamically assigned
-
 ---
 
 ## 💡 How Does It Work?  
 
-DoCoreAI follows a structured process to enhance AI prompts:
+DoCoreAI follows a structured process to enhance AI prompts:  
 
-1️⃣ AI Role Detection – Identifies the AI agent’s role and task.  
-2️⃣ Intelligence Mapping – Assigns reasoning, creativity, precision, and temperature values.  
-3️⃣ Prompt Optimization – Fine-tunes the input prompt using optimized intelligence properties.  
-4️⃣ LLM Execution – Sends the enhanced prompt to OpenAI, Groq, or other supported models.
+1️⃣ Identifies Role & Query Type → Understands task complexity.  
+2️⃣ Maps Intelligence Parameters → Determines reasoning, creativity, precision, and temperature.  
+3️⃣ Refines Prompt Dynamically → Adjusts LLM input for optimal response.  
+4️⃣ Processes via LLM → Sends structured input to OpenAI, Groq, etc.  
+5️⃣ Delivers Optimized Output → Returns a refined response.
 
-💡 Example:  
-**Before** DoCoreAI: "Summarize this report."  
-**After** DoCoreAI: "Summarize this report with high precision (0.9), low creativity (0.2), and deep reasoning (0.8)."
+---
+
+### 🔥 Before vs. After DoCoreAI
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+
+| 🚀 Scenario         | ❌ Before DoCoreAI | ✅ After DoCoreAI |
+|---------------------|------------------|------------------|
+| **Basic Query**     | `"Summarize this report."` | `"Summarize this report with high precision (0.9), low creativity (0.2), and deep reasoning (0.8)."` |
+| **Customer Support AI** | Responds generically, lacking empathy and clarity | Adjusts tone to be more empathetic and clear |
+| **Data Analysis AI** | Generic report with inconsistent accuracy | Ensures high precision and structured insights |
+| **Creative Writing** | Flat, uninspired responses | Boosts creativity and storytelling adaptability |
+| **Token Efficiency** | Wastes tokens with unnecessary verbosity | Optimizes response length, reducing costs |
+
+
+---
 
 ### **🔗 Step-by-Step Workflow:**
 1️⃣ **User Query →** A user submits a question/query to your application.  
