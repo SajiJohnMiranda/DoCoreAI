@@ -127,8 +127,21 @@ This adaptive approach ensures that LLMs deliver role-specific, optimized respon
 You can install `docoreai` from [PyPI](https://pypi.org/project/docoreai/) using pip:
 
 ```bash
-pip install docoreai
+pip install docoreai  
 ```
+### How to set it up  
+
+After installing `docoreai`, create a `.env` file in the root directory with the following content:  
+
+```ini
+# .env file
+OPENAI_API_KEY="your-openai-api-key"  
+GROQ_API_KEY="your-groq-api-key"  
+MODEL_PROVIDER="openai"  # Choose 'openai' or 'groq'  
+MODEL_NAME='gpt-3.5-turbo' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc  
+```
+---
+
 ```bash
 import os
 from dotenv import load_dotenv
@@ -240,19 +253,6 @@ Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI 
 
 ---
 
-## How to set it up
-
-After installing `docoreai`, create a `.env` file in the root directory with the following content:
-
-```ini
-# .env file
-OPENAI_API_KEY="your-openai-api-key"
-GROQ_API_KEY="your-groq-api-key"
-MODEL_PROVIDER="openai"  # Choose 'openai' or 'groq'
-MODEL_NAME='gpt-3.5-turbo' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc
-```
----
-
 ## ⚖️ License
 Licensed under [MIT License](./LICENSE.md). Use freely, contribute, and enhance AI for everyone!    
 
@@ -269,7 +269,7 @@ We’d love for developers to test it with different providers and share insight
 + Creativity & structure – How well does it balance reasoning, precision, and creativity across different models?  
 + Performance impact – Are there noticeable improvements in token efficiency and response relevance?  
 
-#### 📢 Your feedback helps improve DoCoreAI! If you’ve tested it with Cohere, Groq, Mistral, or any other model, drop your findings in GitHub Discussions or open an Issue/PR with insights!  
+#### 📢 Your feedback helps improve DoCoreAI! If you’ve tested it with openai, Groq, Cohere, Mistral, or any other model, drop your findings in GitHub Discussions or open an Issue/PR with insights!  
 ---
 ⭐ **Star the repo**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  
 👀 **Watch for updates**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/subscription)  
