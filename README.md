@@ -48,24 +48,6 @@ DoCoreAI follows a structured process to enhance AI prompts:
 
 ### 🔥 Before vs. After DoCoreAI
 
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-  }
-  th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-  }
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-</style>
 
 | 🚀 Scenario         | ❌ Before DoCoreAI | ✅ After DoCoreAI |
 |---------------------|------------------|------------------|
