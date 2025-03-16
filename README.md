@@ -2,7 +2,7 @@
 
 #### **🚀 Optimize LLM Responses | 🛠️ Fine-Tune AI Intelligence | ⚡ Supercharge Prompting**
 ---
-![🔥 Downloads ](https://img.shields.io/pypi/dm/docoreai)
+![🔥 Downloads ](https://img.shields.io/pypi/dm/docoreai) [Pypi DoCoreAI](https://pypi.org/project/docoreai/)
 ---
 
 ## 🔥 What is DoCoreAI?  
@@ -268,4 +268,6 @@ Response accuracy & depth – Does the AI follow optimized intelligence paramete
 Creativity & structure – How well does it balance reasoning, precision, and creativity across different models?  
 Performance impact – Are there noticeable improvements in token efficiency and response relevance?  
 📢 Your feedback helps improve DoCoreAI! If you’ve tested it with Cohere, Groq, Mistral, or any other model, drop your findings in GitHub Discussions or open an Issue/PR with insights!  
-[⭐this Repo](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)
+⭐ **Star the repo**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  
+👀 **Watch for updates**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/subscription)  
+🍴 **Fork & contribute**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/fork)  
