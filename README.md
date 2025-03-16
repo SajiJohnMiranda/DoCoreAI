@@ -2,7 +2,7 @@
 
 #### **🚀 Optimize LLM Responses | 🛠️ Fine-Tune AI Intelligence | ⚡ Supercharge Prompting**
 ---
-####![🔥 Downloads ](https://img.shields.io/pypi/dm/docoreai)
+![🔥 Downloads ](https://img.shields.io/pypi/dm/docoreai)
 ---
 
 ## 🔥 What is DoCoreAI?  
