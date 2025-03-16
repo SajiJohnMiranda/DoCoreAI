@@ -247,7 +247,7 @@ DoCoreAI is designed to work across multiple LLMs like OpenAI GPT, Cohere, Mistr
 🔍 How well does DoCoreAI optimize prompts for your preferred LLM?
 We’d love for developers to test it with different providers and share insights on:
 
-Response accuracy & depth – Does the AI follow optimized intelligence parameters effectively?
-Creativity & structure – How well does it balance reasoning, precision, and creativity across different models?
-Performance impact – Are there noticeable improvements in token efficiency and response relevance?
+Response accuracy & depth – Does the AI follow optimized intelligence parameters effectively?  
+Creativity & structure – How well does it balance reasoning, precision, and creativity across different models?  
+Performance impact – Are there noticeable improvements in token efficiency and response relevance?  
 📢 Your feedback helps improve DoCoreAI! If you’ve tested it with Cohere, Groq, Mistral, or any other model, drop your findings in GitHub Discussions or open an Issue/PR with insights!
