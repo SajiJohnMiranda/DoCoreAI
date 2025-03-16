@@ -20,7 +20,7 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 - **Trial-and-error tuning is inefficient** – Developers waste time manually adjusting temperature and prompts.  
 - **Generic prompts yield unpredictable results** – No clear control over AI intelligence per task.  
 
-### 🕹️ **How DoCoreAI Solves This:**  
+### 🧩 **How DoCoreAI Solves This:**  
 ✅ **Intelligence Profiling:** Automatically adjusts reasoning, creativity, precision, and temperature.  
 ✅ **Context Awareness:** Adapts AI responses to the role (e.g., customer support, data analyst, programmer etc..).  
 ✅ **Token Efficiency:** Reduces API costs by optimizing responses.
@@ -249,9 +249,7 @@ Licensed under [MIT License](./LICENSE.md). Use freely, contribute, and enhance 
 
 ---
 
-# 🚀 DoCoreAI: Redefining AI Optimization
-
-![🔥 Downloads](https://static.pepy.tech/badge/docoreai) *This is just the beginning...
+![🔥 Downloads ](https://static.pepy.tech/badge/docoreai) *...is just the beginning...*
 
 ---
 
