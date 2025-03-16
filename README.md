@@ -83,6 +83,7 @@ DoCoreAI ensures that AI agents perform at their best by customizing intelligenc
 
 This adaptive approach ensures that LLMs deliver role-specific, optimized responses every time.
 
+
 ---
 
 
@@ -97,6 +98,7 @@ This adaptive approach ensures that LLMs deliver role-specific, optimized respon
 | **🏥 Medical AI Assistants** | Requires **high reasoning**, factual correctness, and minimal creativity | Reduces unnecessary creativity to ensure accuracy in medical advice |
 | **🎨 Creative Writing AI** | Needs **high creativity** and **storytelling adaptability** | Enhances originality, narrative flow, and engaging content generation |
  
+---
 
 ### 🏢 **For Businesses & Startups:**
 - **🤖 AI Agents, Chatbots & Virtual Assistants** – Make AI interactions **more natural and helpful**.
@@ -104,10 +106,14 @@ This adaptive approach ensures that LLMs deliver role-specific, optimized respon
 - **📊 Data & Market Analysis** – Extract **meaningful insights from unstructured data**.
 - **🎨 Creative AI** –  Enhances storytelling, content generation, and brainstorming.
 
+---
+
 ### 🛠️ **For Developers & Engineers:**
 - **⚙️ Fine-Tuning Custom LLMs** – Boost reasoning, logic, and adaptability.
 - **📝 AI-Powered Content Generation** – Enhance blogs, marketing copy, and technical writing.
 - **🧪 Research & Experimentation** – Test and build **next-gen AI applications**.  
+
+---
 
 ### 🍒 **Generalized Solution for All**
 - **⚙️ Easily Works across all domains and user roles, allowing fine-tuning for different applications
