@@ -221,20 +221,13 @@ While DoCoreAI is compatible with other LLMs (e.g., LLaMA 3, Claude etc), result
 - Our Testing & Research shows that token usage is reduced by 15-30% when compared to normal prompts, leading to:
     Lower API Costs – Reduced token consumption means lower expenses when using OpenAI or Groq models.
 
-**Proposed Enhancement: Vector Database Integration**
+**Proposed Enhancement: Vector Database Integration**  
 We are currently exploring the integration of a vector database to store intelligence profiles for past queries. This will probably enable faster retrieval of optimized parameters for similar prompts, further reducing token usage and improving response efficiency. Stay tuned!
 
 **Future Support for Fine-Tuned Models:**  
 We recognize the growing demand for fine-tuned open-source models tailored for specific applications. In future updates, we aim to explore Integration with fine-tuned LLaMA/Custom GPT models, Support for locally deployed models (via Ollama, vLLM, etc.) & Customization of intelligence parameters based on domain-specific data.
 
 Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI models, ensuring flexibility for all developers. Contributions and suggestions are welcome!
-
----
-
-## Finally Why DoCoreAI?
-
-- It **quantifies prompt intelligence** instead of relying on trial-and-error prompts.
-- AI **responds efficiently** when guided by reasoning, creativity, and precision metrics.
 
 ---
 
@@ -256,7 +249,13 @@ Licensed under [MIT License](./LICENSE.md). Use freely, contribute, and enhance 
 
 ---
 
-💡 **Let’s revolutionize AI prompt optimization together!** 🚀
+# 🚀 DoCoreAI: Redefining AI Optimization
+
+![🔥 Downloads](https://static.pepy.tech/badge/docoreai) *This is just the beginning...
+
+---
+
+**Let’s revolutionize AI prompt optimization together!** 
 
 🤝 Contribute & Share Insights on LLM Performance
 DoCoreAI is designed to work across multiple LLMs like OpenAI GPT, Cohere, Mistral, Claude, LLaMA, and more—but we know every model behaves differently! 🚀
