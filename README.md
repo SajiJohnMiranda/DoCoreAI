@@ -115,7 +115,7 @@ This adaptive approach ensures that LLMs deliver role-specific, optimized respon
 
 ## 🎯 Getting Started
 ### **📌 Installation**
-You can install `docoreai` from PyPI using pip:
+You can install `docoreai` from [PyPI](https://pypi.org/project/docoreai/) using pip:
 
 ```bash
 pip install docoreai
@@ -137,6 +137,14 @@ def main():
 ```
 ```bash
 python file-name.py
+```
+```bash
+{'response': 
+
+	"optimized_response": "One good way for an experienced programmer to start coding in Python is by focusing on Python syntax and     exploring advanced features such as list comprehensions, lambda functions, and object-oriented programming concepts. Additionally, leveraging Python frameworks like Django or Flask can provide practical hands-on experience in building web applications...",\n    
+	
+	"intelligence_profile": { "reasoning": 0.9, "creativity": 0.6, "precision": 0.9, "temperature": 0.6 }\n}
+
 ```
 OR
 
