@@ -140,7 +140,7 @@ def main():
 ```bash
 {'response': 
 
-	"optimized_response": "One good way for an experienced programmer to start coding in Python is by focusing on Python syntax and     exploring advanced features such as list comprehensions, lambda functions, and object-oriented programming concepts. Additionally, leveraging Python frameworks like Django or Flask can provide practical hands-on experience in building web applications...",\n    
+	"optimized_response": "One good way for an experienced programmer to start coding in Python is by focusing on Python syntax and exploring advanced features such as list comprehensions, lambda functions, and object-oriented programming concepts. Additionally, leveraging Python frameworks like Django or Flask can provide practical hands-on experience in building web applications...",\n    
 	
 	"intelligence_profile": { "reasoning": 0.9, "creativity": 0.6, "precision": 0.9, "temperature": 0.6 }\n}
 
@@ -159,9 +159,19 @@ pip install -r requirements.txt
 ```bash
 uvicorn api.main:app
 ```
-4️⃣ Start using the API:
+4️⃣ Start using Swagger:
 ```bash
-Browser POST "http://127.0.0.1:8000/docs" Select /intelligence-profiler-demo 
+ http://127.0.0.1:8000/docs 
+```
+5️⃣ Test the API in Postman:
+```bash
+ http://127.0.0.1:8000/intelligence_profiler
+
+ Body:
+    {
+    "user_content": "Can you walk me through how to connect my laptop to this new network?",
+    "role": "Technical Support Agent"
+    }
 ```
 Quick test [Sample Code](https://github.com/SajiJohnMiranda/DoCoreAI/tree/main/tests/Quick%20Test)
 
