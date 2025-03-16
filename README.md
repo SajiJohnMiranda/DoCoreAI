@@ -1,7 +1,7 @@
 # 🌟 DoCoreAI – The Future of Smart AI Interactions  
 
 **🚀 Optimize LLM Responses | 🛠️ Fine-Tune AI Intelligence | ⚡ Supercharge Prompting**  
-
+![🔥 Downloads ](https://img.shields.io/pypi/dm/docoreai) *...is just the beginning...*
 ---
 
 ## 🔥 What is DoCoreAI?  
@@ -246,10 +246,6 @@ MODEL_NAME='gpt-3.5-turbo' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc
 
 ## ⚖️ License
 Licensed under [MIT License](./LICENSE.md). Use freely, contribute, and enhance AI for everyone!    
-
----
-
-![🔥 Downloads ](https://static.pepy.tech/badge/docoreai) *...is just the beginning...*
 
 ---
 
