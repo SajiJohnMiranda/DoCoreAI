@@ -141,7 +141,7 @@ MODEL_PROVIDER="openai"  # Choose 'openai' or 'groq'
 MODEL_NAME='gpt-3.5-turbo' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc  
 ```
 ---
-
+Create a file-name.py:
 ```bash
 import os
 from dotenv import load_dotenv
@@ -156,9 +156,11 @@ def main():
 
 ....
 ```
+Run file-name.py in terminal:
 ```bash
 >> python file-name.py
 ```
+The intelligence_profiler function returns a response:
 ```bash
 {'response': 
 
@@ -185,7 +187,7 @@ uvicorn api.main:app
 ```bash
  http://127.0.0.1:8000/docs 
 ```
-5️⃣ Test the API in Postman:
+5️⃣ Test the DoCoreAI API in Postman:
 ```bash
  http://127.0.0.1:8000/intelligence_profiler
 
