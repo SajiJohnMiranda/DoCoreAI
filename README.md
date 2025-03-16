@@ -1,8 +1,8 @@
 # 🌟 DoCoreAI – The Future of Smart AI Interactions  
 
-### **🚀 Optimize LLM Responses | 🛠️ Fine-Tune AI Intelligence | ⚡ Supercharge Prompting**
+#### **🚀 Optimize LLM Responses | 🛠️ Fine-Tune AI Intelligence | ⚡ Supercharge Prompting**
 ---
-![🔥 Downloads ](https://img.shields.io/pypi/dm/docoreai) *...is just the beginning...*
+####![🔥 Downloads ](https://img.shields.io/pypi/dm/docoreai)
 ---
 
 ## 🔥 What is DoCoreAI?  
