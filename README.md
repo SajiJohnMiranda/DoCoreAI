@@ -17,15 +17,15 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 
 ### 🚨 **The Problem with Standard AI Models:**  
 - **LLMs lack role-based intelligence** – A support bot should be empathetic, but a data bot needs precision.  
-- **Trial-and-error tuning is inefficient** – Developers waste time manually adjusting temperature and creativity.  
+- **Trial-and-error tuning is inefficient** – Developers waste time manually adjusting temperature and prompts.  
 - **Generic prompts yield unpredictable results** – No clear control over AI intelligence per task.  
 
-### **How DoCoreAI Solves This:**  
+### 🕹️ **How DoCoreAI Solves This:**  
 ✅ **Intelligence Profiling:** Automatically adjusts reasoning, creativity, precision, and temperature.  
-✅ **Context Awareness:** Adapts AI responses to the role (e.g., customer support vs. data analysis).  
+✅ **Context Awareness:** Adapts AI responses to the role (e.g., customer support, data analyst, programmer etc..).  
 ✅ **Token Efficiency:** Reduces API costs by optimizing responses.
 
-### ✅ **Key Benefits**
+### **Key Benefits**
 - **🧠 Smarter AI** – Enhances reasoning, problem-solving, and adaptability.
 - **⚡ Best Responses** – Intelligent prompts mean more accurate answers.
 - **🔧 Full Control** – Developers can fine-tune intelligence parameters like depth, creativity, and accuracy.
@@ -84,14 +84,18 @@ This adaptive approach ensures that LLMs deliver role-specific, optimized respon
 
 ---
 
-## 🚀 Use Cases
-DoCoreAI is highly versatile and can be integrated across various domains:
 
-🔹 Customer Support AI: Ensures friendly, concise, and empathetic interactions.  
-🔹 Business Analytics AI: Generates precise reports with accurate insights.  
-🔹 Medical AI Assistants: Maintains high reasoning while reducing creativity for factual correctness.  
-🔹 Content Creation AI: Enhances creativity while keeping precision at a balanced level.  
-🔹 Legal & Compliance AI: Ensures responses are strictly factual and highly precise.  
+### 🚀 Use Cases: How DoCoreAI Enhances AI Agents across various domains
+
+| 🏷️ AI Agent Type      | 🎯 Key Requirements | ✅ How DoCoreAI Helps |
+|----------------------|--------------------|----------------------|
+| **📞 Customer Support AI** | Needs high **empathy**, **clarity**, and **logical reasoning** | Ensures friendly, concise, and empathetic interactions |
+| **📊 Data Analyst AI** | Requires **high precision** and **deep analytical reasoning** | Structures data-driven responses for accuracy and insight |
+| **📝 Legal & Compliance AI** | Must be **strictly factual**, legally sound, and highly **precise** | Enhances precision and reduces ambiguity in compliance-related responses |
+| **💡 Business Analytics AI** | Needs to extract **meaningful insights** from unstructured data | Improves decision-making by structuring responses intelligently |
+| **🏥 Medical AI Assistants** | Requires **high reasoning**, factual correctness, and minimal creativity | Reduces unnecessary creativity to ensure accuracy in medical advice |
+| **🎨 Creative Writing AI** | Needs **high creativity** and **storytelling adaptability** | Enhances originality, narrative flow, and engaging content generation |
+ 
 
 ### 🏢 **For Businesses & Startups:**
 - **🤖 AI Agents, Chatbots & Virtual Assistants** – Make AI interactions **more natural and helpful**.
@@ -111,10 +115,28 @@ DoCoreAI is highly versatile and can be integrated across various domains:
 
 ## 🎯 Getting Started
 ### **📌 Installation**
-You can install `docoreai` from PyPI using pip: and Quick test [Sample Code](./blob/main/tests/Quick%20Test/test.py)
+You can install `docoreai` from PyPI using pip:
 
 ```bash
 pip install docoreai
+```
+```bash
+import os
+from dotenv import load_dotenv
+
+from docore_ai import intelligence_profiler 
+
+def main():
+    print(
+        intelligence_profiler("What is one good way to start python coding for a experienced programmer","AI Developer",
+                              os.getenv("MODEL_PROVIDER"),
+                              os.getenv("MODEL_NAME")))
+
+....
+....
+```
+```bash
+python file-name.py
 ```
 OR
 
@@ -134,6 +156,7 @@ uvicorn api.main:app
 ```bash
 Browser POST "http://127.0.0.1:8000/docs" Select /intelligence-profiler-demo 
 ```
+Quick test [Sample Code](./blob/main/tests/Quick%20Test/test.py)
 
 🎉 **You're all set to build smarter AI applications!**  
 
