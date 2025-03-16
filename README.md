@@ -47,7 +47,7 @@ DoCoreAI follows a structured process to enhance AI prompts:
 
 ---
 
-### 🔥 Before vs. After DoCoreAI  
+#### 🔥 Before vs. After DoCoreAI  
 
 
 |   Scenario          | ❌ Before DoCoreAI | ✅ After DoCoreAI |
@@ -250,7 +250,7 @@ Licensed under [MIT License](./LICENSE.md). Use freely, contribute, and enhance 
 
 ---
 
-**Let’s revolutionize AI prompt optimization together!** 
+### **Let’s revolutionize AI prompt optimization together!** 
 
 🤝 Contribute & Share Insights on LLM Performance
 DoCoreAI is designed to work across multiple LLMs like OpenAI GPT, Cohere, Mistral, Claude, LLaMA, and more—but we know every model behaves differently! 🚀
