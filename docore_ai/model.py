@@ -1,4 +1,5 @@
 import os
+from typing import Optional
 import openai
 from groq import Groq
 from dotenv import load_dotenv
@@ -12,7 +13,8 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 MODEL_PROVIDER = os.getenv("MODEL_PROVIDER")  #'openai' , 'groq' etc
 MODEL_NAME = os.getenv("MODEL_NAME")  # gpt-3.5-turbo, gemma2-9b-it 
 
-def intelligence_profiler(user_content: str, role: str, model_provider: str = MODEL_PROVIDER, model_name: str = MODEL_NAME) -> str:
+def intelligence_profiler(user_content: str, role: str, model_provider: str = MODEL_PROVIDER, model_name: str = MODEL_NAME,
+                          show_token_usage: Optional[bool] = False) -> dict:
     #### LIVE -- LIVE---LIVE -- LIVE
     system_message = f"""
         You are an expert AI assistant. First, analyze the user query and determine optimal intelligence parameters:
@@ -54,7 +56,11 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
         )
         content = response.choices[0].message.content
         usage = response.usage  # Extract token usage
-        return {"response": content, "usage": usage}  # Return both content and usage
+        if show_token_usage:
+            return {"response": content, "usage": usage}  # Return both content and usage
+        else:
+            return {"response": content}
+
     elif model_provider == "groq":
         client = Groq(api_key=GROQ_API_KEY) 
         response = client.chat.completions.create(
@@ -64,6 +70,9 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
         )       
         content = response.choices[0].message.content  
         usage = response.usage  # Extract token usage
-        return {"response": content, "usage": usage}  # Return both content and usage
+        if show_token_usage:
+            return {"response": content, "usage": usage}  # Return both content and usage
+        else:
+            return {"response": content}
     
     
