@@ -16,14 +16,14 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 ## 🌍 Why DoCoreAI?  
 
 ### 🚨 **The Problem with Standard AI Models:**  
-- LLMs lack role-based intelligence – A support bot should be empathetic, but a data bot needs precision.  
-- Trial-and-error tuning is inefficient – Developers waste time manually adjusting temperature and creativity.  
-- Generic prompts yield unpredictable results – No clear control over AI intelligence per task.  
+- **LLMs lack role-based intelligence** – A support bot should be empathetic, but a data bot needs precision.  
+- **Trial-and-error tuning is inefficient** – Developers waste time manually adjusting temperature and creativity.  
+- **Generic prompts yield unpredictable results** – No clear control over AI intelligence per task.  
 
 ### **How DoCoreAI Solves This:**  
-✅ Intelligence Profiling: Automatically adjusts reasoning, creativity, precision, and temperature.  
-✅ Context Awareness: Adapts AI responses to the role (e.g., customer support vs. data analysis).  
-✅ Token Efficiency: Reduces API costs by optimizing responses.
+✅ **Intelligence Profiling:** Automatically adjusts reasoning, creativity, precision, and temperature.  
+✅ **Context Awareness:** Adapts AI responses to the role (e.g., customer support vs. data analysis).  
+✅ **Token Efficiency:** Reduces API costs by optimizing responses.
 
 ### ✅ **Key Benefits**
 - **🧠 Smarter AI** – Enhances reasoning, problem-solving, and adaptability.
