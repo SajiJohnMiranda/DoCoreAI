@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/assets/docoreai-intelligence-profiler-readme-banner.png" alt="DoCoreAI Banner" width="100%">
-</p>
+![DoCoreAI Banner](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/assets/docoreai-intelligence-profiler-readme-banner.png)
 
 # 🌟 DoCoreAI – The Future of Smart AI Interactions  
 
