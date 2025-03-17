@@ -210,6 +210,16 @@ Quick test [Sample Code](https://github.com/SajiJohnMiranda/DoCoreAI/tree/main/t
 
 ---
 
+## How Does DoCoreAI Work Internally? 🤔
+
+DoCoreAI isn't just another AI wrapper—it dynamically fine-tunes LLM interactions in a single step. Instead of using static parameters, it analyzes the intent, adjusts intelligence properties, and optimizes responses in real-time.
+
+But how does it actually decide reasoning depth, creativity, precision, and even temperature? 🤯 What makes its approach different from traditional prompt engineering? And why does it reduce token usage by 15-30%?
+
+The process is streamlined, but there's a lot happening under the hood. Want to dig deeper? [Drop your questions in the Q&A section](https://github.com/SajiJohnMiranda/DoCoreAI/discussions/categories/q-a), and let’s unravel the mechanics together! 
+
+---
+
 ## 🔗 Integrations & Compatibility
 DoCoreAI is designed to work seamlessly with major AI platforms:
 - Works with **OpenAI GPT, Claude, LLaMA, Falcon, Cohere, and more.**
@@ -279,7 +289,15 @@ We’d love for developers to test it with different providers and share insight
 + Performance impact – Are there noticeable improvements in token efficiency and response relevance?  
 
 #### 📢 Your feedback helps improve DoCoreAI! If you’ve tested it with openai, Groq, Cohere, Mistral, or any other model, drop your findings in GitHub [Discussions](https://github.com/SajiJohnMiranda/DoCoreAI/discussions) or open an Issue/PR with insights!  
+---
+#### 📖 Read More on Our Blog
 
+Stay updated with our latest insights, tutorials, and announcements:  
+
+📝 **[Read on Medium](https://medium.com/@mobilights/intelligent-prompt-optimization-bac89b64fa84)**  
+📝 **[Read on Dev.to](https://dev.to/sajijohn/introducing-docoreai-unlock-ais-potential-in-dynamic-prompt-tuning-39i3)**  
+
+Follow us for more updates! 🚀
 ---
 ⭐ **Star the repo**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  
 👀 **Watch for updates**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/subscription)  
