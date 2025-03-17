@@ -199,6 +199,11 @@ uvicorn api.main:app
     "role": "Technical Support Agent"
     }
 ```
+Response:
+![DoCoreAI Response](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/assets/DoCoreAI-json-response-temperature.jpg)
+
+The image showcases a JSON response where DoCoreAI dynamically assigns the ideal reasoning, creativity, and precision values—ensuring the AI agent delivers the perfect response every time. With an intelligently calculated temperature, the AI strikes the perfect balance between accuracy and adaptability, eliminating guesswork and maximizing response quality. 
+
 Quick test [Sample Code](https://github.com/SajiJohnMiranda/DoCoreAI/tree/main/tests/Quick%20Test)
 
 🎉 **You're all set to build smarter AI applications!**  
