@@ -52,6 +52,10 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
     # Choose model provider
     if model_provider == "openai":
         openai.api_key = OPENAI_API_KEY
+
+        # Append new user query to message history -MEMORY WIP ToDO
+        #messages.append({"role": "user", "content": user_input})
+
         response = openai.Client().chat.completions.create(
             model=model_name,
             messages=messages,
@@ -59,6 +63,10 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
         )
         content = response.choices[0].message.content
         usage = response.usage  # Extract token usage
+
+        # Append AI response to message history -MEMORY WIP ToDO
+        #messages.append({"role": "assistant", "content": content})
+
         if show_token_usage:
             return {"response": content, "usage": usage}  # Return both content and usage
         else:
@@ -66,6 +74,10 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
 
     elif model_provider == "groq":
         client = Groq(api_key=GROQ_API_KEY) 
+
+        # Append new user query to message history -MEMORY WIP ToDO
+        #messages.append({"role": "user", "content": user_input})
+
         response = client.chat.completions.create(
             messages=messages,
             model=model_name,
@@ -73,6 +85,10 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
         )       
         content = response.choices[0].message.content  
         usage = response.usage  # Extract token usage
+
+        # Append AI response to message history -MEMORY WIP ToDO
+        #messages.append({"role": "assistant", "content": content})        
+
         if show_token_usage:
             return {"response": content, "usage": usage}  # Return both content and usage
         else:
