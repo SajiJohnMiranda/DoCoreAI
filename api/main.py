@@ -10,16 +10,21 @@ if __name__ == "__main__":
     uvicorn.run("api.main:app", host="127.0.0.1", port=8000, reload=True)
 
 app = FastAPI(
-    title="DoCoreAI API",
-    description="""🚀 Elevate Your AI’s Intelligence with Contextually Smart Responses!  
-The DoCoreAI API analyzes prompts and **profiles the intelligence parameters** required to generate effective responses.  
-By optimizing reasoning, creativity, and precision, it ensures that **AI-driven applications produce more relevant, insightful, and impactful outputs**.  
+    title="DoCoreAI: Smarter AI Responses with Automated Intelligence Profiling",
+    description="""🚀 The DoCoreAI API analyzes prompts, determines intelligence parameters, and optimizes response generation. By fine-tuning reasoning, creativity, precision, and temperature, it helps AI models produce more relevant and structured outputs.  
 
-💡 **Why Use DoCoreAI's Intelligence Profiler?**  
-✅ **Unlock AI Intelligence** – Get structured intelligence parameters for optimized responses.  
-✅ **Seamless LLM Integration** – Works effortlessly with OpenAI, Groq, Anthropic, Mistral, and more.  
-✅ **Optimized for Agentic AI** – Enhance decision-making in autonomous AI workflows.  
-✅ **Developer-Friendly & Scalable** – FastAPI-powered, efficient, and easy to integrate.""",    version="1.0"
+💡 **Why Use DoCoreAI**  
+
+✔ **Analyzes query complexity** – Understands the intent and adjusts the Intelligence accordingly.  
+✔ **Enhances AI responses** – Dynamically applies reasoning, creativity, and precision.  
+✔ **Role-based adaptability** – Adjusts responses based on expertise (e.g., tech support, maths-teacher, artist etc).  
+✔ **Optimal content structuring** – Automatically determines the best response format.  
+✔ **Auto temperature tuning** – No need to manually tweak temperature values; Eliminates manual adjustments by predicting the best value.  
+✔ **Efficient and cost-effective** – Saves tokens by optimizing response generation.  
+✔ **Developer-friendly** – No more trial-and-error tuning—just integrate and get optimized results instantly.
+
+🔗**Compatible with:** OpenAI, Groq, Anthropic, Mistral, and more. ⚡**FastAPI-powered** – Built for speed and scalability. 🚀
+""",    version="1.0"
 )
 
 class PromptRequest(BaseModel):
@@ -45,8 +50,8 @@ class DemoPromptRequest(BaseModel):
     #manual_mode: bool = Field(False, example=False, description="Enable manual input mode")
     role: str = Field(None, example="Technical Support Agent", description="Role of LLM")
 
-@app.post("/intelligence-profiler-demo", summary="""🎯 Optimize Your Prompts for Smarter AI Responses!
-This endpoint enhances standard prompts by dynamically injecting reasoning, creativity, and precision, making them more effective for LLMs and Agentic AI applications.""")
+@app.post("/intelligence-profiler-demo", summary="""🎯 Optimize your prompts for Smarter AI responses 
+with dynamically injected reasoning, creativity & precision params that boosts your LLM's intelligence.""")
 def intelligence_profiler_swagger_demo(request: DemoPromptRequest, groq_api_key: str = Header(None, description="Groq API Token")):
         """
         This endpoint enhances a given prompt with AI intelligence properties 
@@ -57,7 +62,7 @@ def intelligence_profiler_swagger_demo(request: DemoPromptRequest, groq_api_key:
         - **reasoning**: Logical depth (higher means more detailed reasoning).
         - **creativity**: Adjusts randomness and freeform nature of the response.
         - **precision**: Determines specificity (higher means more detailed responses).
-        - **temperature**: Controls variability in AI-generated text.
+        - **temperature**: Controls variability/randomness in AI-generated text.
 
         **Example Input:**
         ```json
@@ -74,7 +79,7 @@ def intelligence_profiler_swagger_demo(request: DemoPromptRequest, groq_api_key:
             "reasoning": 0.7,
             "creativity": 0.6,
             "precision": 0.8,
-            "temperature": 0.7,
+            "temperature": 0.7
         }        
         ```
 

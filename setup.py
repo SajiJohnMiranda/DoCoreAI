@@ -10,11 +10,6 @@ setup(
     author="Saji John",
     author_email="sajijohnmiranda@gmail.com",
     license="Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",  # Add license
-    classifiers=[
-        "License :: Other/Proprietary License",
-        "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3",
-    ],
     description="DoCoreAI is an intelligence profiler that optimizes prompts",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -35,7 +30,7 @@ setup(
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
+        "License :: Other/Proprietary License",  # Corrected license classifier
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.7",    
