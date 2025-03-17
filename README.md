@@ -276,6 +276,14 @@ Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI 
 Licensed under [MIT License](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE.md). Use freely, contribute, and enhance AI for everyone!    
 
 ---
+## ⚠️ Known Issues
+
+### 🚧 Memory Window Context Code - Work in Progress
+The **memory window context** feature is currently under development.  
+- 🛠 We are actively working on optimizing context handling for better efficiency.  
+- 🚀 Future updates will enhance long-term memory retention and retrieval.  
+
+---
 
 ### **Let’s revolutionize AI prompt optimization together!** 
 
