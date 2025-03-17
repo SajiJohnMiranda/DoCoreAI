@@ -26,7 +26,7 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 - **Generic prompts yield unpredictable results** – No clear control over AI intelligence per task.  
 
 ### 🧩 **How DoCoreAI Solves This:**  
-✅ **Intelligence Profiling:** Automatically adjusts reasoning, creativity, precision, and temperature for thr Role.  
+✅ **Intelligence Profiling:** Automatically adjusts reasoning, creativity, precision, and temperature for the Role.  
 ✅ **Context Awareness:** Adapts AI responses to the role (e.g., customer support, data analyst, programmer etc..).  
 ✅ **Token Efficiency:** Reduces API costs by optimizing responses.
 
