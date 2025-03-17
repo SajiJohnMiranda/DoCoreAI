@@ -1,8 +1,8 @@
-![DoCoreAI Banner](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/assets/docoreai-intelligence-profiler-readme-banner.png)
+![DoCoreAI Banner](https://raw.githubusercontent.com/SajiJohnMiranda/DoCoreAI/main/assets/docoreai-intelligence-profiler-readme-banner.png)
 
-# 🌟 DoCoreAI – The Future of Smart AI Interactions  
+# 🌟 DoCoreAI – Optimize LLM Intelligence, Reduce Cost, Boost Performance    
 
-#### **🚀 Optimize LLM Responses | 🛠️ Fine-Tune AI Intelligence | ⚡ Supercharge Prompting**
+#### **🚀 Optimize LLM Responses | 💡 Dynamic AI Intelligence | 💰 Reduce Token Usage & Cost**
 ---
 ![🔥 Downloads ](https://img.shields.io/pypi/dm/docoreai)  
 ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  
@@ -258,7 +258,7 @@ Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI 
 ---
 
 ## ⚖️ License
-Licensed under [MIT License](./LICENSE.md). Use freely, contribute, and enhance AI for everyone!    
+Licensed under [MIT License](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE.md). Use freely, contribute, and enhance AI for everyone!    
 
 ---
 
