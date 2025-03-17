@@ -1,5 +1,11 @@
 # DoCoreAI License  
 
+# Licensing Information
+
+- The **GitHub source code** is available under the **MIT License**.  
+- The **PyPI package (`pip install docoreai`)** is released under **Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)**.  
+- This means you **can modify the source code** freely, including for commercial use, but you **cannot use the PyPI package commercially**.  
+
 ## 1. License Grant  
 This software is open-source and provided under the **MIT License**, with additional restrictions for SaaS and multi-agent implementations.  
 
