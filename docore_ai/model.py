@@ -26,6 +26,9 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
         - If **Precision is high (≥0.8) and Creativity is low (≤0.2)** → **Temperature = 0.1 to 0.3** (Factual & Logical)
         - If **Creativity is high (≥0.8) and Reasoning is low (≤0.3)** → **Temperature = 0.9 to 1.0** (Highly Creative)
         - If **Balanced Creativity & Precision (0.4 - 0.7 range)** → **Temperature = 0.4 to 0.7** (Neutral or Conversational)
+        - If **Reasoning is high (≥0.8) and Creativity is moderate (0.4-0.7)** → **Temperature = 0.3 to 0.5** (Logical with slight abstraction)
+        - If **Precision is high (≥0.8) and Reasoning is low (≤0.3)** → **Temperature = 0.2 to 0.3** (Fact-driven, minimal context)
+        - If **Reasoning, Creativity, and Precision are all high (≥0.8)** → **Temperature = 0.6 to 0.9** (Balanced, intelligent, and flexible)
 
         
         You MUST generate responses using the derived temperature value dynamically, ensuring coherence with the intelligence profile.
