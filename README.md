@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/assets/docoreai-intelligence-profiler-readme-banner.png" alt="DoCoreAI Banner" width="100%">
+</p>
+
 # 🌟 DoCoreAI – The Future of Smart AI Interactions  
 
 #### **🚀 Optimize LLM Responses | 🛠️ Fine-Tune AI Intelligence | ⚡ Supercharge Prompting**
