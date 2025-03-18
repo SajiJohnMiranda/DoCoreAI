@@ -38,8 +38,10 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 - **🛠️ Open-Source & Extensible** – Customize it for your specific use case.
 
 ---
+
 ## 🚀 A New Era in AI Optimization  
 DoCoreAI **redefines AI interactions** by dynamically optimizing reasoning, creativity, and precision—bringing human-like cognitive intelligence to LLMs for smarter, cost-efficient responses.
+
 ---
 
 ## 💡 How Does It Work?  
