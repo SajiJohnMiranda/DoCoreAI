@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="docoreai",
-    version="0.1.8",
+    version="0.1.9",
     author="Saji John",
     author_email="sajijohnmiranda@gmail.com",
     license="Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",  # Add license
