@@ -94,4 +94,72 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
         else:
             return {"response": content}
     
+#Added only for tetsting
+def normal_prompt(user_content: str, role: str, model_provider: str = MODEL_PROVIDER, model_name: str = MODEL_NAME, 
+                  show_token_usage: Optional[bool] = False) -> dict:
+    """  Sends a normal prompt to the selected LLM (OpenAI or Groq) without intelligence parameters.
+    """
+    system_message = f"""
+    You are an AI assistant. Your goal is to respond to user queries as accurately as possible.
+
+    - Generate a **coherent and informative** response based on the user's request.
+    - Ensure responses remain relevant to the given context.
+
+    Return **ONLY** the following JSON format:  
+    {{
+        "response": "<AI-generated response>"
+    }}
+    """
+
+
+    messages = [
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": user_content}
+    ]
+
+    # Choose model provider
+    if model_provider == "openai":
+        openai.api_key = OPENAI_API_KEY
+
+        # Append new user query to message history -MEMORY WIP ToDO
+        #messages.append({"role": "user", "content": user_input})
+
+        response = openai.Client().chat.completions.create(
+            model=model_name,
+            messages=messages,
+            #temperature=0.3 #DO NOT SET THE TEMPERATURE HERE!
+
+        )
+        content = response.choices[0].message.content
+        usage = response.usage  # Extract token usage
+
+        # Append AI response to message history -MEMORY WIP ToDO
+        #messages.append({"role": "assistant", "content": content})
+
+        if show_token_usage:
+            return {"response": content, "usage": usage}  # Return both content and usage
+        else:
+            return {"response": content}
+
+    elif model_provider == "groq":
+        client = Groq(api_key=GROQ_API_KEY) 
+
+        # Append new user query to message history -MEMORY WIP ToDO
+        #messages.append({"role": "user", "content": user_input})
+
+        response = client.chat.completions.create(
+            messages=messages,
+            model=model_name,
+            #temperature=0.2 #DO NOT SET THE TEMPERATURE HERE!
+        )       
+        content = response.choices[0].message.content  
+        usage = response.usage  # Extract token usage
+
+        # Append AI response to message history -MEMORY WIP ToDO
+        #messages.append({"role": "assistant", "content": content})        
+
+        if show_token_usage:
+            return {"response": content, "usage": usage}  # Return both content and usage
+        else:
+            return {"response": content}
     
