@@ -271,19 +271,20 @@ When you first test DoCoreAI, you might notice higher completion tokens compared
 
 DoCoreAI dynamically adjusts AI behavior based on reasoning, creativity, and precision.  
 
-It optimizes response quality upfront, reducing unnecessary follow-up queries.
+It optimizes response quality upfront, reducing unnecessary follow-up queries.  
 🔍 But Here’s How DoCoreAI Actually Saves Costs  
 ✔️ Fewer follow-up API calls: A well-optimized first response means users don’t need to rephrase their questions.  
 ✔️ Controlled AI behavior: Instead of AI generating unpredictable outputs, DoCoreAI ensures response efficiency.  
 ✔️ Smart token optimization: Over multiple queries, total tokens used decrease compared to standard LLM prompts.
 
 📊 What Should You Do?  
-🔹 Don’t judge cost based on a single query—test multiple queries.  
-🔹 Compare total token usage over time, not just one response.
+🔹 **Don’t judge cost based on a single query—test**  
+🔹 Compare total token usage over time, not just one response.  
 🔹 Measure the reduction in API calls for a real cost-benefit analysis.  
 
-⚡ DoCoreAI isn’t just about using fewer tokens—it’s about making AI smarter and more cost-effective.  
-🚀 Test it right, and you’ll see the difference!
+### ⚡ DoCoreAI isn’t just about using fewer tokens—it’s about making AI smarter and more cost-effective.  
+🚀 **Test it right, and you’ll see the difference!**
+
 ---
 
 ## 🌟 Join the Community:  
