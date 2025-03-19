@@ -46,7 +46,30 @@ DoCoreAI **redefines AI interactions** by dynamically optimizing reasoning, crea
 
 ## 💡 How Does It Work?  
 
-DoCoreAI follows a structured process to enhance AI prompts:  
+### How Does DoCoreAI Do This Internally?
+
+- Every DoCoreAI prompt is context-aware, with a role assigned to each query, ensuring accurate intent recognition.
+
+- The core cognitive skills of human intelligence—Reasoning, Creativity, and Precision—are dynamically analyzed.
+
+- DoCoreAI predicts the optimal levels of these skills based on the context of the prompt.
+
+- The temperature is then mathematically derived based on these values using the formula:
+
+T = max(0.1, min(1.2, 0.2 + (0.75 × C) − (0.4 × P) + (0.2 × (1 − R))))
+
+where:
+
+- - C = Creativity
+- - P = Precision
+- - R = Reasoning
+- - Base temperature starts at 0.2
+
+- The carefully crafted system message instructs the AI to predict and assign these values dynamically based on context.
+
+- The LLM then generates responses using these intelligence parameters, optimizing for accuracy, coherence, and efficiency—all in a single step.
+
+In simple words, DoCoreAI follows a structured process to enhance AI prompts:  
 
 1️⃣ Identifies Role & Query Type → Understands task complexity.  
 2️⃣ Maps Intelligence Parameters → Determines reasoning, creativity, precision, and temperature.  
