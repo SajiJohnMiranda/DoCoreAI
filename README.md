@@ -282,6 +282,8 @@ It optimizes response quality upfront, reducing unnecessary follow-up queries.
 🔹 Compare total token usage over time, not just one response.  
 🔹 Measure the reduction in API calls for a real cost-benefit analysis.  
 
+Note: The current output appends extra content "intelligence_profile": { "reasoning": 0.5, "creativity": 0.2, "precision": 0.9, "temperature": 0.4}, which currently adds up the total tokens. This output text can be simply ignored in the PROD version, to save on tokens.  
+
 ### ⚡ DoCoreAI isn’t just about using fewer tokens—it’s about making AI smarter and more cost-effective.  
 🚀 **Test it right, and you’ll see the difference!**
 
