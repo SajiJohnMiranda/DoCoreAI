@@ -77,6 +77,8 @@ In simple words, DoCoreAI follows a structured process to enhance AI prompts:
 4️⃣ Processes via LLM → Sends structured input to OpenAI, Groq, etc.  
 5️⃣ Delivers Optimized Output → Returns a refined response.
 
+The process is streamlined, but there's a lot happening under the hood. Want to dig deeper? [Drop your questions in the Q&A section](https://github.com/SajiJohnMiranda/DoCoreAI/discussions/categories/q-a), and let’s unravel the mechanics together! 
+
 ---
 
 #### 🔥 Before vs. After DoCoreAI  
@@ -238,15 +240,6 @@ Quick test [Sample Code](https://github.com/SajiJohnMiranda/DoCoreAI/tree/main/t
 
 ---
 
-## How Does DoCoreAI Work Internally? 🤔
-
-DoCoreAI isn't just another AI wrapper—it dynamically fine-tunes LLM interactions in a single step. Instead of using static parameters, it analyzes the intent, adjusts intelligence properties, and optimizes responses in real-time.
-
-But how does it actually decide reasoning depth, creativity, precision, and even temperature? 🤯 What makes its approach different from traditional prompt engineering? And why does it reduce token usage by 15-30%?
-
-The process is streamlined, but there's a lot happening under the hood. Want to dig deeper? [Drop your questions in the Q&A section](https://github.com/SajiJohnMiranda/DoCoreAI/discussions/categories/q-a), and let’s unravel the mechanics together! 
-
----
 
 ## 🔗 Integrations & Compatibility
 DoCoreAI is designed to work seamlessly with major AI platforms:
@@ -270,6 +263,27 @@ DoCoreAI is designed to work seamlessly with major AI platforms:
 -Perfect for chatbots, AI assistants, automation, and enterprise AI solutions.  
 -DoCoreAI transforms AI interactions by making prompts truly intelligent.
 
+---
+## ⚠️ Important: DoCoreAI’s Token Usage—Read Before You Judge!  
+
+**Why DoCoreAI May Seem to Use More Tokens Initially**
+When you first test DoCoreAI, you might notice higher completion tokens compared to a normal LLM prompt. This is expected because:
+
+DoCoreAI dynamically adjusts AI behavior based on reasoning, creativity, and precision.  
+
+It optimizes response quality upfront, reducing unnecessary follow-up queries.
+🔍 But Here’s How DoCoreAI Actually Saves Costs  
+✔️ Fewer follow-up API calls: A well-optimized first response means users don’t need to rephrase their questions.  
+✔️ Controlled AI behavior: Instead of AI generating unpredictable outputs, DoCoreAI ensures response efficiency.  
+✔️ Smart token optimization: Over multiple queries, total tokens used decrease compared to standard LLM prompts.
+
+📊 What Should You Do?  
+🔹 Don’t judge cost based on a single query—test multiple queries.  
+🔹 Compare total token usage over time, not just one response.
+🔹 Measure the reduction in API calls for a real cost-benefit analysis.  
+
+⚡ DoCoreAI isn’t just about using fewer tokens—it’s about making AI smarter and more cost-effective.  
+🚀 Test it right, and you’ll see the difference!
 ---
 
 ## 🌟 Join the Community:  
