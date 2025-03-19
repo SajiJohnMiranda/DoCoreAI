@@ -1,0 +1,163 @@
+import json
+import os
+import re
+import openai
+import numpy as np
+from dotenv import load_dotenv
+from groq import Groq
+
+# Load API Keys
+if not os.path.exists(".env"):
+    raise FileNotFoundError("⚠️ Missing .env file! Please create one with API keys.")
+
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+MODEL_PROVIDER = os.getenv("MODEL_PROVIDER")
+MODEL_NAME = os.getenv("MODEL_NAME")
+
+# -------------------------------------------
+# ✅ Step 1: Create 3D Temperature Table
+# -------------------------------------------
+temperature_table = np.random.uniform(0.0, 1.0, (101, 101, 101))  # 100x100x100 grid
+
+for R in range(101):  
+    for C in range(101):  
+        for P in range(101):  
+            R_norm = R / 100.0  # Convert index back to range 0.0 - 1.0
+            C_norm = C / 100.0
+            P_norm = P / 100.0
+            
+            # Assign temperature values based on the rules
+            if P_norm >= 0.8 and C_norm <= 0.2:
+                temperature_table[R, C, P] = np.random.uniform(0.1, 0.3)  # Factual & Logical
+
+            elif C_norm >= 0.8 and R_norm <= 0.3:
+                temperature_table[R, C, P] = np.random.uniform(0.9, 1.0)  # Highly Creative
+
+            elif 0.4 <= C_norm <= 0.7 and 0.4 <= P_norm <= 0.7:
+                temperature_table[R, C, P] = np.random.uniform(0.4, 0.7)  # Neutral
+
+            elif R_norm >= 0.8 and 0.4 <= C_norm <= 0.7:
+                temperature_table[R, C, P] = np.random.uniform(0.3, 0.5)  # Logical with slight abstraction
+
+            elif P_norm >= 0.8 and R_norm <= 0.3:
+                temperature_table[R, C, P] = np.random.uniform(0.2, 0.3)  # Fact-driven
+
+            elif R_norm >= 0.8 and C_norm >= 0.8 and P_norm >= 0.8:
+                temperature_table[R, C, P] = np.random.uniform(0.6, 0.9)  # Balanced Intelligence
+
+            else:
+                temperature_table[R, C, P] = np.random.uniform(0.3, 0.7)  # Default temperature range
+
+# -------------------------------------------
+# ✅ Step 2: Extract T(R,C,P) and Replace
+# -------------------------------------------
+def extract_and_replace_temperature(ai_response: str):
+    """Extracts T(R,C,P) from AI response, replaces it with actual temperature, and ensures 2 decimal precision."""
+
+    # Find T(R,C,P) pattern in the AI response (floating-point version)
+    match = re.search(r'T\((\d+(?:\.\d+)?),(\d+(?:\.\d+)?),(\d+(?:\.\d+)?)\)', ai_response)
+
+
+    if match:
+        # Convert to float (directly use as indexes)
+        R_idx, C_idx, P_idx = map(float, match.groups())
+
+        # Convert floating index (0.0 to 1.0) to discrete index (0 to 100)
+        R_idx = min(int(R_idx * 100), 100)
+        C_idx = min(int(C_idx * 100), 100)
+        P_idx = min(int(P_idx * 100), 100)
+
+        # Fetch the temperature
+        T_value = round(temperature_table[R_idx, C_idx, P_idx], 2)  # Direct value, no scaling
+
+        print(f"📌 Found: T({R_idx/100:.2f},{C_idx/100:.2f},{P_idx/100:.2f}) → Temperature = {T_value:.2f}")
+
+        # Replace "T(R,C,P)" in AI response with actual temperature
+        ai_response = ai_response.replace(match.group(0), f'{T_value:.2f}')
+
+    # Ensure it's a valid JSON response
+    try:
+        response_json = json.loads(ai_response)
+
+        # Normalize & round R, C, P values (Fix applied here)
+        response_json["intelligence_profile"]["reasoning"] = round(response_json["intelligence_profile"]["reasoning"] / 100, 2)
+        response_json["intelligence_profile"]["creativity"] = round(response_json["intelligence_profile"]["creativity"] / 100, 2)
+        response_json["intelligence_profile"]["precision"] = round(response_json["intelligence_profile"]["precision"] / 100, 2)
+
+        # Ensure temperature is a float (AFTER replacement)
+        if isinstance(response_json["intelligence_profile"]["temperature"], str):
+            try:
+                response_json["intelligence_profile"]["temperature"] = round(float(response_json["intelligence_profile"]["temperature"]), 2)
+            except ValueError:
+                print("⚠️ Temperature conversion failed! Using default value 0.5")
+                response_json["intelligence_profile"]["temperature"] = 0.5
+
+        return json.dumps(response_json, indent=4)
+
+    except json.JSONDecodeError:
+        print("⚠️ AI response is not a valid JSON. Returning as-is.")
+        return ai_response  # Return raw response if JSON parsing fails
+
+
+# -------------------------------------------
+# ✅ Step 3: Intelligence Profiler
+# -------------------------------------------
+def intelligence_profiler(user_content: str, role: str, model_provider: str = MODEL_PROVIDER, model_name: str = MODEL_NAME):
+    """Profiles intelligence parameters and dynamically fetches temperature."""
+
+    # System message instructing AI to output T(R,C,P)
+    system_message = f"""
+        You are an AI assistant analyzing user queries.
+        - Predict Reasoning (0-1), Creativity (0-1), and Precision (0-1).
+        - Return Temperature in this format: T({{R*100:.0f}},{{C*100:.0f}},{{P*100:.0f}})  # AI fills R,C,P, we fetch T
+        
+        You MUST generate responses using the fetched temperature(T) value dynamically, ensuring coherence with the intelligence profile.
+
+        Return **ONLY** this JSON format:
+        {{
+            "optimized_response": "<AI-generated response>",
+            "intelligence_profile": {{
+                "reasoning": {{R*100:.0f}},
+                "creativity": {{C*100:.0f}},
+                "precision": {{P*100:.0f}},
+                "temperature": "T({{R:.2f}},{{C:.2f}},{{P:.2f}})"
+            }}
+        }}
+    """
+
+    user_message = f"User Request: \"{user_content}\" Role: \"{role}\""
+
+    messages = [
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": user_message}
+    ]
+
+    # -------------------------------------------
+    # ✅ Step 4: Call LLM
+    # -------------------------------------------
+    if model_provider == "openai":
+        openai.api_key = OPENAI_API_KEY
+        response = openai.Client().chat.completions.create(
+            model=model_name,
+            messages=messages,
+            #temperature=0.7  # Keeping it balanced for test purposes
+        )
+        content = response.choices[0].message.content
+
+    elif model_provider == "groq":
+        client = Groq(api_key=GROQ_API_KEY)
+        response = client.chat.completions.create(
+            messages=messages,
+            model=model_name,
+        )
+        content = response.choices[0].message.content
+
+    # -------------------------------------------
+    # ✅ Step 5: Replace T(R,C,P) with actual temperature
+    # -------------------------------------------
+    final_response = extract_and_replace_temperature(content)
+
+    return {"response": final_response}
+

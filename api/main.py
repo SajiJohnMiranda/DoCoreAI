@@ -1,7 +1,7 @@
 from typing import Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from docore_ai.model import intelligence_profiler
+from docore_ai.model import intelligence_profiler, normal_prompt
 from docore_ai.demo_model import intelligence_profiler_demo
 from fastapi import Header
 
@@ -43,6 +43,17 @@ def prompt_live_intelli_profiler(request: PromptRequest):
         role=request.role,
     )
     return {"optimal_response":optimal_response}
+
+
+@app.post("/normal_prompt", summary="For testing purpose only",  include_in_schema=False)
+def normal_prompt_live(request: PromptRequest):
+
+    normal_prompt_response = normal_prompt(
+        user_content=request.user_content,
+        role=request.role
+    )
+    return {"normal_response":normal_prompt_response}
+
 
 
 class DemoPromptRequest(BaseModel):
