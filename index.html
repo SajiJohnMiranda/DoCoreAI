@@ -1,217 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="DoCoreAI is an AI-powered intelligence profiler designed for optimized large language model interactions. Explore futuristic AI solutions with a modern minimal design.">
-  <meta name="keywords" content="DoCoreAI, AI, Intelligence Profiler, LLM, AI Optimization, Modern Futuristic, Open Source">
-  <meta name="author" content="SajiJohnMiranda">
-  <meta property="og:title" content="DoCoreAI - AI-Powered Intelligence Profiler">
-  <meta property="og:description" content="Explore DoCoreAI, a cutting-edge AI intelligence profiler designed for modern and futuristic solutions.">
-  <meta property="og:image" content="PLACEHOLDER_FOR_BANNER_IMAGE_URL">
-  <meta property="og:url" content="https://github.com/SajiJohnMiranda/DoCoreAI">
-  <meta name="twitter:card" content="summary_large_image">
-  
-  <!-- Title -->
-  <title>DoCoreAI - AI-Powered Intelligence Profiler</title>
-  
-  <!-- CSS Styles -->
-  <style>
-    /* Reset some default browser styles */
-    body, h1, h2, h3, p, ul, li, a, nav, footer, header, section, article {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      line-height: 1.6;
-      color: #fff;
-      background: linear-gradient(135deg, #0d0d0d 20%, #0f4c81 10%, #00aaff 70%);
-      background-size: cover;
-    }
-    /* Navigation Bar */
-    nav {
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00aaff;
-    }
-    /* Hero Section / Cover Page */
-    header {
-      text-align: center;
-      padding: 4rem 1rem;
-      background: rgba(0, 0, 0, 0.4);
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    /* Main Content */
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #00aaff;
-      padding-bottom: 0.5rem;
-    }
-    section p {
-      margin-bottom: 1rem;
-    }
-    /* External Links List */
-    .external-links ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .external-links li {
-      margin: 0.5rem 1rem;
-    }
-    .external-links a {
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .external-links a:hover {
-      text-decoration: underline;
-    }
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background: rgba(0, 0, 0, 0.6);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DoCoreAI - AI-powered intelligence profiler for optimized LLM interactions.">
+    <meta name="keywords" content="DoCoreAI, AI, Intelligence Profiler, LLM, AI Optimization">
+    <meta name="author" content="SajiJohnMiranda">
+    <title>DoCoreAI - AI-Powered Intelligence Profiler</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#features">Features</a>
-    <a href="#docs">Docs</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  
-  <!-- Cover / Hero Section -->
-  <header id="cover">
-    <h1>Welcome to DoCoreAI</h1>
-    <p>An AI-Powered Intelligence Profiler for Optimized LLM Interactions</p>
-    <!-- Placeholder for Call-to-Action -->
-    <a href="PLACEHOLDER_FOR_PYPI_INSTALLER_LINK" style="display:inline-block; padding:1rem 2rem; background:#00aaff; color:#fff; text-decoration:none; border-radius:4px;">pip install docoreai</a>
-  </header>
-  
-  <!-- Main Content -->
-  <main>
-    <!-- About Section -->
-    <section id="about">
-      <h2>About DoCoreAI</h2>
-      <p>DoCoreAI is an open-source AI toolkit designed to enhance large language model (LLM) interactions through innovative optimization techniques. Combining modern and futuristic design, our project delivers a sleek, minimal interface with powerful, scalable AI solutions.</p>
-    </section>
-    
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">DoCoreAI</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#docs">Docs</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <h1>Unleash AI Intelligence</h1>
+        <p>Optimize LLM Interactions with DoCoreAI.</p>
+        <a href="PLACEHOLDER_FOR_PYPI_INSTALLER_LINK" class="cta-button">Install Now</a>
+    </header>
+
     <!-- Features Section -->
     <section id="features">
-      <h2>Features</h2>
-      <ul>
-        <li>Optimized LLM interactions</li>
-        <li>Advanced intelligence profiling</li>
-        <li>Seamless integration with popular AI frameworks</li>
-        <li>Open source and community driven</li>
-      </ul>
+        <h2>Why Choose DoCoreAI?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-bolt"></i>
+                <h3>Blazing Fast</h3>
+                <p>Optimize AI responses with near-zero latency.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-brain"></i>
+                <h3>Smart Intelligence</h3>
+                <p>Advanced profiling for contextual AI understanding.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-code"></i>
+                <h3>Developer Friendly</h3>
+                <p>Simple API integration for quick adoption.</p>
+            </div>
+        </div>
     </section>
-    
-    <!-- Documentation Section -->
-    <section id="docs">
-      <h2>Documentation</h2>
-      <p>Explore our comprehensive documentation to get started, understand the API, and learn best practices.</p>
-      <!-- Placeholder for GitHub README or Wiki link -->
-      <a href="PLACEHOLDER_FOR_GITHUB_README_OR_WIKI_LINK" target="_blank">View Detailed Docs</a>
-    </section>
-    
+
     <!-- Blog Section -->
     <section id="blog">
-      <h2>Read Our Blog</h2>
-      <p>Stay updated with the latest insights, tutorials, and news on AI innovation.</p>
-      <!-- External blog links -->
-      <div class="external-links">
-        <ul>
-          <li><a href="PLACEHOLDER_FOR_MEDIUM_LINK" target="_blank">Medium</a></li>
-          <li><a href="PLACEHOLDER_FOR_DEVTO_LINK" target="_blank">Dev.to</a></li>
+        <h2>Latest Articles</h2>
+        <div class="blog-container">
+            <div class="blog-card">
+                <h3>Understanding DoCoreAI</h3>
+                <p>Explore the core architecture & AI optimization techniques.</p>
+                <a href="PLACEHOLDER_FOR_MEDIUM_LINK" class="read-more">Read on Medium</a>
+            </div>
+            <div class="blog-card">
+                <h3>Integrating with OpenAI</h3>
+                <p>Seamlessly connect DoCoreAI with OpenAI models.</p>
+                <a href="PLACEHOLDER_FOR_DEVTO_LINK" class="read-more">Read on Dev.to</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 DoCoreAI. All Rights Reserved.</p>
+        <ul class="social-links">
+            <li><a href="PLACEHOLDER_FOR_GITHUB_LINK"><i class="fab fa-github"></i></a></li>
+            <li><a href="PLACEHOLDER_FOR_MEDIUM_LINK"><i class="fab fa-medium"></i></a></li>
+            <li><a href="PLACEHOLDER_FOR_DEVTO_LINK"><i class="fab fa-dev"></i></a></li>
         </ul>
-      </div>
-    </section>
-    
-    <!-- Status Section (PyPI Installer, PyPI Status) -->
-    <section id="status">
-      <h2>Get Started</h2>
-      <p>Install DoCoreAI from PyPI and check the status of the package.</p>
-      <div class="external-links">
-        <ul>
-          <li><a href="PLACEHOLDER_FOR_PYPI_INSTALLER_LINK" target="_blank">PyPI Installer</a></li>
-          <li><a href="PLACEHOLDER_FOR_PYPI_STATUS_LINK" target="_blank">PyPI Status</a></li>
-        </ul>
-      </div>
-    </section>
-    
-    <!-- Contributions Section -->
-    <section id="contributions">
-      <h2>Contribute to DoCoreAI</h2>
-      <p>Join our community of developers. Fork the repo, make your improvements, and submit a pull request.</p>
-      <!-- Placeholder for link to CONTRIBUTING.md -->
-      <a href="PLACEHOLDER_FOR_CONTRIBUTING_LINK" target="_blank">Learn How to Contribute</a>
-    </section>
-  </main>
-  
-  <!-- Footer -->
-  <footer id="contact">
-    <p>© 2023 DoCoreAI. All Rights Reserved.</p>
-    <!-- Placeholder for external social links if needed -->
-    <div class="external-links">
-      <ul>
-        <li><a href="PLACEHOLDER_FOR_GITHUB_LINK" target="_blank">GitHub</a></li>
-        <li><a href="PLACEHOLDER_FOR_MEDIUM_LINK" target="_blank">Medium</a></li>
-        <li><a href="PLACEHOLDER_FOR_DEVTO_LINK" target="_blank">Dev.to</a></li>
-      </ul>
-    </div>
-  </footer>
-  
-  <!-- Optional: Include JavaScript for interactive elements -->
-  <script>
-    // Example: Smooth scroll for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  </script>
+    </footer>
+
 </body>
 </html>
