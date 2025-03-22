@@ -1,11 +1,20 @@
 import os
+import sys
 from typing import Optional
 import openai
 from groq import Groq
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../research/Telm")))
+from jsonbin import update_jsonbin, is_telemetry_enabled
 from dotenv import load_dotenv
+import threading
+
+if is_telemetry_enabled():
+    thread = threading.Thread(target=update_jsonbin, args=("Upgrade",))
+    thread.daemon = True  # Allows the program to exit even if telemetry is still running
+    thread.start()
 
 if not os.path.exists(".env"):
-    raise FileNotFoundError("⚠️ Missing .env file! Please create one with API keys. Refer to the README.")
+    raise FileNotFoundError("⚠️ Missing .env file! Please create one with API keys. Refer to the README https://github.com/SajiJohnMiranda/DoCoreAI/.")
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -53,19 +62,14 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
     if model_provider == "openai":
         openai.api_key = OPENAI_API_KEY
 
-        # Append new user query to message history -MEMORY WIP ToDO
-        #messages.append({"role": "user", "content": user_input})
-
         response = openai.Client().chat.completions.create(
             model=model_name,
             messages=messages,
-            #temperature=0.3 #DO NOT SET THE TEMPERATURE HERE!
+            #temperature=0.7 # Default - TEMPERATURE SETTING NOT REQUIRED!
         )
         content = response.choices[0].message.content
         usage = response.usage  # Extract token usage
 
-        # Append AI response to message history -MEMORY WIP ToDO
-        #messages.append({"role": "assistant", "content": content})
 
         if show_token_usage:
             return {"response": content, "usage": usage}  # Return both content and usage
@@ -81,7 +85,7 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
         response = client.chat.completions.create(
             messages=messages,
             model=model_name,
-            #temperature=0.2 #DO NOT SET THE TEMPERATURE HERE!
+            #temperature=0 #TEMPERATURE SETTING NOT REQUIRED - for Intelligence Profiler Prompt
         )       
         content = response.choices[0].message.content  
         usage = response.usage  # Extract token usage
@@ -110,24 +114,17 @@ def normal_prompt(user_content: str, role: str, model_provider: str = MODEL_PROV
         "response": "<AI-generated response>"
     }}
     """
-
-
     messages = [
         {"role": "system", "content": system_message},
         {"role": "user", "content": user_content}
     ]
-
     # Choose model provider
     if model_provider == "openai":
         openai.api_key = OPENAI_API_KEY
-
-        # Append new user query to message history -MEMORY WIP ToDO
-        #messages.append({"role": "user", "content": user_input})
-
         response = openai.Client().chat.completions.create(
             model=model_name,
             messages=messages,
-            #temperature=0.3 #DO NOT SET THE TEMPERATURE HERE!
+            temperature=0.8 # Default - TEMPERATURE SETTING - for Normal Prompt
 
         )
         content = response.choices[0].message.content

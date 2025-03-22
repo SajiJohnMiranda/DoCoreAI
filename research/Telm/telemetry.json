@@ -1,0 +1,10 @@
+{
+    "upgrades": [
+        {
+            "version": "0.1.9",
+            "python_version": "3.13.0",
+            "timestamp": "2025-03-22T17:39:21.547663Z",
+            "notes": "Upgrade"
+        }
+    ]
+}

@@ -329,6 +329,24 @@ The **memory window context** feature is currently under development.
 - 🚀 Future updates will enhance long-term memory retention and retrieval.  
 
 ---
+### Anonymous Telemetry  
+To improve DoCoreAI and understand usage patterns, we have enabled Anonymous Telemetry by default. This helps us gather insights such as function calls and usage frequency—without collecting any personal or sensitive data.  
+
+How it Works:  
+
+- Tracks only calls to pip install docoreai --upgrade for the package.  
+- Only logs docoreai version, python version and execution timestamps.  
+- No user data, API keys, or prompt content is stored.  
+- Data is sent securely to our analytics endpoint.  
+
+How to Disable Telemetry: To disable telemetry, set the following in your .env file:  
+
+```
+DOCOREAI_TELEMETRY=False
+
+```
+We respect your privacy! If you have concerns, feel free to disable it.
+---
 
 ### **Let’s revolutionize AI prompt optimization together!** 
 
@@ -349,6 +367,8 @@ Stay updated with our latest insights, tutorials, and announcements:
 
 📝 **[Read on Medium](https://medium.com/@mobilights/intelligent-prompt-optimization-bac89b64fa84)**  
 📝 **[Read on Dev.to](https://dev.to/sajijohn/introducing-docoreai-unlock-ais-potential-in-dynamic-prompt-tuning-39i3)**  
+📝 **[Read on Reddit](https://www.reddit.com/r/MachineLearning/comments/1jgx6ep/p_the_end_of_ai_trial_error_docoreai_has_arrived/)**  
+
 
 Follow us for more updates! 🚀
 ---
