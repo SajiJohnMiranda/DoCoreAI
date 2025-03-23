@@ -239,7 +239,6 @@ Quick test [Sample Code](https://github.com/SajiJohnMiranda/DoCoreAI/tree/main/t
 🎉 **You're all set to build smarter AI applications!**  
 
 ---
----
 ## Welcoming Testers & Contributors  
 We’re actively looking for passionate testers to help validate DoCoreAI across different LLMs! Your insights will play a key role in refining its performance and making it even more effective.  
 
@@ -253,7 +252,6 @@ We’re actively looking for passionate testers to help validate DoCoreAI across
 🚀 Join our growing community and help shape the future of AI-driven prompt optimization!
 
 ---
-
 
 ## 🔗 Integrations & Compatibility
 DoCoreAI is designed to work seamlessly with major AI platforms:
@@ -381,7 +379,7 @@ Stay updated with our latest insights, tutorials, and announcements:
 
 📝 **[Read on Medium](https://medium.com/@mobilights/intelligent-prompt-optimization-bac89b64fa84)**  
 📝 **[Read on Dev.to](https://dev.to/sajijohn/introducing-docoreai-unlock-ais-potential-in-dynamic-prompt-tuning-39i3)**  
-📝 **[Read on Reddit](https://www.reddit.com/r/MachineLearning/comments/1jgx6ep/p_the_end_of_ai_trial_error_docoreai_has_arrived/)**  
+📝 **[Read on Reddit](https://www.reddit.com/r/aiagents/comments/1jh1gc8/the_end_of_ai_trial_error_docoreai_has_arrived/)**  
 
 
 Follow us for more updates! 🚀
