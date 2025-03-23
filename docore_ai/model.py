@@ -1,10 +1,9 @@
 import os
-import sys
+#import sys
 from typing import Optional
 import openai
 from groq import Groq
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../research/Telm")))
-from jsonbin import update_jsonbin, is_telemetry_enabled
+from research.Telm.jsonbin import update_jsonbin, is_telemetry_enabled
 from dotenv import load_dotenv
 import threading
 
