@@ -239,6 +239,20 @@ Quick test [Sample Code](https://github.com/SajiJohnMiranda/DoCoreAI/tree/main/t
 🎉 **You're all set to build smarter AI applications!**  
 
 ---
+---
+## Welcoming Testers & Contributors  
+We’re actively looking for passionate testers to help validate DoCoreAI across different LLMs! Your insights will play a key role in refining its performance and making it even more effective.  
+
+💡 Whether you're testing, analyzing results, suggesting improvements, or enhancing documentation, every contribution helps push DoCoreAI forward.  
+
+### How You Can Contribute  
+🔹 You’re not just hunting for bugs—you’re here to evaluate how well DoCoreAI optimizes prompts compared to standard inputs and identify areas for improvement.  
+🔹 Want to contribute to testing? Clone or fork the repo, run tests with different LLMs, and submit a pull request (PR) with your observations.  
+🔹 Need help setting up the test environment? Reach out at sajijohnmiranda@gmail.com—happy to assist!  
+
+🚀 Join our growing community and help shape the future of AI-driven prompt optimization!
+
+---
 
 
 ## 🔗 Integrations & Compatibility
