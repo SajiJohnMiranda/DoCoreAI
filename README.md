@@ -252,16 +252,16 @@ DoCoreAI is designed to work seamlessly with major AI platforms:
 ## 📈 Why Developers Should Use DoCoreAI
 
 🔹 Smarter AI, Better Results  
--Ensures AI models understand the intelligence scope required for each task.  
--Enhances prompt efficiency, reducing trial and error in prompt engineering.
+- Ensures AI models understand the intelligence scope required for each task.  
+- Enhances prompt efficiency, reducing trial and error in prompt engineering.
 
 🔹 Saves Time & Effort  
--No need for manual prompt tuning—DoCoreAI does it for you.  
--Works out of the box with OpenAI and Groq models.
+- No need for manual prompt tuning—DoCoreAI does it for you.  
+- Works out of the box with OpenAI and Groq models.
 
 🔹 Ideal for SaaS & AI-driven Applications  
--Perfect for chatbots, AI assistants, automation, and enterprise AI solutions.  
--DoCoreAI transforms AI interactions by making prompts truly intelligent.
+- Perfect for chatbots, AI assistants, automation, and enterprise AI solutions.  
+- DoCoreAI transforms AI interactions by making prompts truly intelligent.
 
 ---
 ## ⚠️ Important: DoCoreAI’s Token Usage—Read Before You Judge!  
