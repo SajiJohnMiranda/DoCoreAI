@@ -1,4 +1,3 @@
-import streamlit as st
 import matplotlib.pyplot as plt
 from datasets import load_dataset
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -22,17 +21,13 @@ similarity_scores = [
     for i in range(len(original_responses))
 ]
 
-# Streamlit Dashboard
-st.title("Cosine Similarity of Responses")
-st.write("This graph compares Normal-Response and DoCoreAI-Response.")
-
 # Matplotlib Plot
-fig, ax = plt.subplots(figsize=(8, 4))
-ax.plot(similarity_scores, marker="o", linestyle="-", color="blue")
-ax.set_xlabel("Response Index")
-ax.set_ylabel("Cosine Similarity Score")
-ax.set_title("Cosine Similarity of Normal vs. DoCoreAI Responses")
-ax.grid(True)
+plt.figure(figsize=(8, 4))
+plt.plot(similarity_scores, marker="o", linestyle="-", color="blue")
+plt.xlabel("Response Index")
+plt.ylabel("Cosine Similarity Score")
+plt.title("Cosine Similarity of Normal vs. DoCoreAI Responses")
+plt.grid(True)
 
-# Show in Streamlit
-st.pyplot(fig)
+# Show the plot
+plt.show()
