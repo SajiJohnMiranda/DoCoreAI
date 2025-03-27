@@ -239,6 +239,17 @@ Quick test [Sample Code](https://github.com/SajiJohnMiranda/DoCoreAI/tree/main/t
 🎉 **You're all set to build smarter AI applications!**  
 
 ---
+## Optimizations in the PyPI Version  
+The PyPI version of DoCoreAI includes slight optimizations compared to the open-source repository. These changes are aimed at improving performance, reducing dependencies, and streamlining the package for end users.
+
+🔹 Key Differences:  
+✔️ Reduced prompt/input tokens.  
+✔️ Certain additional development and research files from the open-source version have been removed to keep the installation lightweight.  
+✔️ Some functionalities have been optimized for better efficiency in production environments.  
+✔️ The PyPI version ensures a smoother out-of-the-box experience, while the GitHub version is more flexible for modifications and contributions.  
+
+If you need the full open-source experience, you can clone the GitHub repository and use the source code directly. However, for most users, the PyPI version is recommended for installation and usage.  
+---
 ## Welcoming Testers & Contributors  
 We’re actively looking for passionate testers to help validate DoCoreAI across different LLMs! Your insights will play a key role in refining its performance and making it even more effective.  
 
@@ -380,6 +391,7 @@ Stay updated with our latest insights, tutorials, and announcements:
 📝 **[Read on Medium](https://medium.com/@mobilights/intelligent-prompt-optimization-bac89b64fa84)**  
 📝 **[Read on Dev.to](https://dev.to/sajijohn/introducing-docoreai-unlock-ais-potential-in-dynamic-prompt-tuning-39i3)**  
 📝 **[Read on Reddit](https://www.reddit.com/r/aiagents/comments/1jh1gc8/the_end_of_ai_trial_error_docoreai_has_arrived/)**  
+📝 **[Dataset on HuggingFace](https://huggingface.co/datasets/DoCoreAI/Dynamic-Temperature-GPT-3.5-Turbo/)**  
 
 
 Follow us for more updates! 🚀
