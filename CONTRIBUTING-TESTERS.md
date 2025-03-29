@@ -17,7 +17,6 @@ Set up the test environment.
 1️⃣ Enter >> '**pip install docoreai**' in terminal  
         - download the test.py from https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/tests/Quick%20Test/test.py  
         - Create a .env file in the root folder. Enter the details as shown..
-        
             ```ini
                 # .env file
                 OPENAI_API_KEY="your-openai-api-key"  
@@ -25,7 +24,6 @@ Set up the test environment.
                 MODEL_PROVIDER="groq"  # Choose 'openai' or 'groq'  
                 MODEL_NAME='gemma2-9b-it' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc  
                 ```
-
         - You may change The PROMPT and ROLE as per your test context  
         - Next run the command >> '**python test.py**'  & Start your test  
 
