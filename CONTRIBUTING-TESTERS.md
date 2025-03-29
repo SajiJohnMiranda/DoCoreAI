@@ -7,19 +7,28 @@ Thank you for your interest in testing DoCoreAI! Your feedback is crucial in ens
 ✔️ Suggest tweaks or improvements based on your findings.  
 ✔️ Share your observations by opening a GitHub issue or submitting a PR.
 
-## 📝 How to Get Started:  
+## 📝 How to Get Started :  
+Set up the test environment.  
 
 **Install python on your machine: https://www.python.org/downloads/**  
 
 **Must create API Tokens to execute the prompts**  For eg: type "Groq API key" in google search  
 
-1️⃣ Enter "pip install docoreai" in terminal  
-        - download the test.py from https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/tests/Quick%20Test/test.py  👈 (The API Keys have to be entered here)  
-        - Next run the command >> **python test.py**  & Start your test  
+1️⃣ Enter >> '**pip install docoreai**' in terminal  
+        - download the test.py from https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/tests/Quick%20Test/test.py  
+        - Create a .env file in the root folder. Enter the details as shown..  
+        
+            ```ini
+                # .env file
+                OPENAI_API_KEY="your-openai-api-key"  
+                GROQ_API_KEY="your-groq-api-key"  
+                MODEL_PROVIDER="groq"  # Choose 'openai' or 'groq'  
+                MODEL_NAME='gemma2-9b-it' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc  
+                ```  
+        - You may change The PROMPT and ROLE as per your test context  
+        - Next run the command >> '**python test.py**'  & Start your test  
 
-    **OR**  Clone the repository & set up the test environment.  
-
-2️⃣ Run DoCoreAI vs. normal LLM and compare results.  
+2️⃣ Run DoCoreAI Response vs. Normal Response from LLMs and compare results.  
 3️⃣ Document your insights and submit feedback via:
 
 GitHub Issues (if you found an inconsistency or improvement area)
