@@ -14,7 +14,7 @@ Set up the test environment.
 
 **Must create API Tokens to execute the prompts**  For eg: type "Groq API key" in google search  
 
-1️⃣ Enter >> '**pip install docoreai**' in terminal  
+1️⃣ Enter >> 'pip install docoreai' in terminal  
         - download the test.py from https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/tests/Quick%20Test/test.py  
         - Create a .env file in the root folder. Enter the details as shown:  
 
@@ -27,7 +27,7 @@ MODEL_NAME='gpt-3.5-turbo' # Choose model  gpt-3.5-turbo, gemma2-9b-it etc
 ```
 
         - You may change The PROMPT and ROLE in the test.py as per your test context  
-        - Next run the command >> '**python test.py**'  & Start your test  
+        - Next run the command >> 'python test.py'  & Start your test  
 
 2️⃣ Run DoCoreAI Response vs. Normal Response from LLMs and compare results.  
 3️⃣ Document your insights and submit feedback via:
