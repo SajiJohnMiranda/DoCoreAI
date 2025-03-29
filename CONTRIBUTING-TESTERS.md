@@ -17,7 +17,7 @@ Set up the test environment.
 1️⃣ Enter >> '**pip install docoreai**' in terminal  
         - download the test.py from https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/tests/Quick%20Test/test.py  
         - Create a .env file in the root folder. Enter the details as shown..  
-        
+
             ```ini
                 # .env file
                 OPENAI_API_KEY="your-openai-api-key"  
@@ -33,7 +33,7 @@ Set up the test environment.
 
 GitHub Issues (if you found an inconsistency or improvement area)
 
-Pull Requests (if you have suggestions for test cases or documentation)
+Pull Requests (if you have suggestions for test cases or documentation)  
 4️⃣ Join discussions & engage with the community!  
 
 📩 Need help? Contact sajijohnmiranda@gmail.com or [Whatsapp](https://wa.me/+919663522720) for assistance in setting up your test environment.  
