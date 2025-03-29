@@ -247,6 +247,7 @@ The PyPI version of DoCoreAI includes slight optimizations compared to the open-
 ✔️ Certain additional development and research files from the open-source version have been removed to keep the installation lightweight.  
 ✔️ Some functionalities have been optimized for better efficiency in production environments.  
 ✔️ The PyPI version ensures a smoother out-of-the-box experience, while the GitHub version is more flexible for modifications and contributions.  
+
 If you need the full open-source experience, you can clone the GitHub repository and use the source code directly. However, for most users, the PyPI version is recommended for installation and usage.  
 
 ---
