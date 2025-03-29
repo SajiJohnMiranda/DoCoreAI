@@ -1,4 +1,4 @@
-![DoCoreAI Banner](https://raw.githubusercontent.com/SajiJohnMiranda/DoCoreAI/main/assets/docoreai-intelligence-profiler-readme-banner.png)
+![DoCoreAI Banner](https://raw.githubusercontent.com/SajiJohnMiranda/DoCoreAI/main/assets/DoCoreAI-Github-header-image.jpg)
 
 # 🌟 DoCoreAI – Optimize LLM Intelligence, Reduce Cost, Boost Performance    
 
