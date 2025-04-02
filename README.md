@@ -9,8 +9,8 @@
 ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  
 ---
 
-## 🔥 What is DoCoreAI?  
-DoCoreAI is an AI **intelligence profiler that optimizes prompts dynamically** with intelligence parameters. Instead of relying on generic LLM prompts, DoCoreAI customizes intelligence properties (such as reasoning, creativity, and precision) to ensure AI agents generate responses that perfectly align with their roles.
+## 🔥 What is DoCoreAI?  (All this started as an AI optimization research... read on;)
+DoCoreAI is an AI **intelligence profiler that optimizes prompts dynamically** with intelligence parameters. Instead of relying on generic LLM prompts, DoCoreAI customizes with intelligence properties (such as reasoning, creativity, and precision) to ensure AI agents generate responses that perfectly align with their roles.
 
 In Simple words - DoCoreAI is an AI intelligence optimizer that dynamically enhances language model (LLM) responses by adjusting reasoning, creativity, precision, and temperature based on the user role. This eliminates manual prompt engineering and ensures context-aware, role-specific responses for customer support, data analysis, and creative writing.
 
@@ -309,7 +309,7 @@ It optimizes response quality upfront, reducing unnecessary follow-up queries.
 
 Note: The current output appends extra content "intelligence_profile": { "reasoning": 0.5, "creativity": 0.2, "precision": 0.9, "temperature": 0.4}, which currently adds up the total tokens. This output text can be simply ignored in the PROD version, to save on tokens.  
 
-### ⚡ DoCoreAI isn’t just about using fewer tokens—it’s about making AI smarter and more cost-effective.  
+### ⚡ DoCoreAI isn’t just about using optimizing temperature or tokens—it’s about making AI smarter and more cost-effective.  
 🚀 **Test it right, and you’ll see the difference!**
 
 ---
@@ -346,7 +346,7 @@ Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI 
 Licensed under [MIT License](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE.md). Use freely, contribute, and enhance AI for everyone!    
 
 ---
-## ⚠️ Known Issues
+## ⚠️ Known Issues - *Work-In-Progress*
 
 ### 🚧 Memory Window Context Code - Work in Progress
 The **memory window context** feature is currently under development.  
@@ -371,6 +371,7 @@ DOCOREAI_TELEMETRY=False
 
 ```
 We respect your privacy! If you have concerns, feel free to disable it.
+
 ---
 
 ### **Let’s revolutionize AI prompt optimization together!** 
