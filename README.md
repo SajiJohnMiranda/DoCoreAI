@@ -43,6 +43,9 @@ Whether you're building an AI agent, chatbot, a virtual assistant, or a SaaS app
 DoCoreAI **redefines AI interactions** by dynamically optimizing reasoning, creativity, and precision—bringing human-like cognitive intelligence to LLMs for smarter, cost-efficient responses.
 
 ---
+A simplified overview:
+![DoCoreAI Before & After Comparison](https://raw.githubusercontent.com/SajiJohnMiranda/DoCoreAI/blob/main/assets/Before%20After%20Temp%20DocoreAI.png)
+---
 
 ## 💡 How Does It Work?  
 
