@@ -44,7 +44,7 @@ DoCoreAI **redefines AI interactions** by dynamically optimizing reasoning, crea
 
 ---
 
-### **A simplified overview:**
+### **DoCoreAI simplified overview:**
 
 ![DoCoreAI Before & After Comparison](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/assets/Before%20After%20Temp%20DocoreAI.png)
 
