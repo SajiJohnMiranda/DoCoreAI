@@ -193,12 +193,13 @@ Example Output:
   "estimated_savings_if_optimized": "$0.000030",
   "estimated_savings%_if_optimized": "30%"
 }  
+```
 
 In this example, the prompt contains 67 tokens with an estimated cost of $0.000101. The bloat score of 1.12 indicates minimal verbosity, suggesting no immediate need for optimization.​
 
 By integrating the Token Profiler into your workflow, you can ensure that your AI prompts are concise, cost-effective, and performance-optimized.  
 
-```
+
 
 ---
 
