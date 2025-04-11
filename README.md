@@ -159,6 +159,48 @@ This adaptive approach ensures that LLMs deliver role-specific, optimized respon
 - **⚙️ Easily Works across all domains and user roles, allowing fine-tuning for different applications
   
 ---
+### New Feature: Token Profiler: Optimize Your AI Prompt Efficiency
+The Token Profiler is a vital feature of DoCoreAI designed to analyze and optimize the efficiency of your AI prompts. By evaluating token usage, it helps identify and reduce unnecessary verbosity, leading to cost savings and improved performance.
+
+Key Features:
+Token Count Analysis: Calculates the total number of tokens in your prompt to ensure it aligns with model constraints.​  
+
+**Cost Estimation:** Provides an estimated cost per API call based on token usage, aiding in budget management.​  
+
+**Bloat Score Assessment:** Assigns a 'bloat score' to measure prompt verbosity, helping to flag and refine overly verbose prompts.​  
+
+**Optimization Insights:** Highlights potential savings by optimizing prompts, offering actionable recommendations for efficiency.  
+
+How It Works:  
+The Token Profiler evaluates your prompt by:​  
+
+1. Counting Tokens: Determines the number of tokens in the input prompt.​
+GitHub  
+
+2. Estimating Costs: Calculates the approximate cost associated with the prompt based on token pricing.​  
+
+3. Assessing Bloat Score: Analyzes the prompt's verbosity to assign a bloat score, indicating potential areas for reduction.​  
+
+4. Suggesting Optimizations: Provides insights into possible cost savings through prompt refinement.  
+
+Example Output:
+```
+{
+  "token_count": 67,
+  "estimated_cost": "$0.000101",
+  "bloat_score": 1.12,
+  "bloat_flag": true,
+  "estimated_savings_if_optimized": "$0.000030",
+  "estimated_savings%_if_optimized": "30%"
+}  
+
+In this example, the prompt contains 67 tokens with an estimated cost of $0.000101. The bloat score of 1.12 indicates minimal verbosity, suggesting no immediate need for optimization.​
+
+By integrating the Token Profiler into your workflow, you can ensure that your AI prompts are concise, cost-effective, and performance-optimized.  
+
+```
+
+---
 
 ## 🎯 Getting Started
 ### **📌 Installation**
@@ -405,6 +447,6 @@ Stay updated with our latest insights, tutorials, and announcements:
 
 Follow us for more updates! 🚀
 ---
-⭐ **Star the repo**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  
+⭐ **Star the repo**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/)  
 👀 **Watch for updates**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/subscription)  
-🍴 **Fork & contribute**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/fork)  
+🍴 **Fork & contribute**: [Click here](https://github.com/SajiJohnMiranda/DoCoreAI/)  
