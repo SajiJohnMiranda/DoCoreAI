@@ -1,6 +1,6 @@
 ![DoCoreAI Banner](https://raw.githubusercontent.com/SajiJohnMiranda/DoCoreAI/main/assets/DoCoreAI-Github-header-image.jpg)
 
-# 🚀 DoCoreAI – Fine-Tune-Free LLM Optimization Engine  
+# 🚀 DoCoreAI – [Fine-Tune-Free LLM Optimization Engine]  
 
 #### **Optimize LLM Responses Dynamically | Reduce Cost | Boost Intelligence | Improve Relevance**  
 
@@ -270,7 +270,7 @@ DoCoreAI is an active research initiative. If you're:
 - A startup building GenAI tools  
 - An investor supporting open research  
 
-📬 Let’s connect → LinkedIn | GitHub Issues
+📬 Let’s connect → [LinkedIn](https://www.linkedin.com/in/saji-john-979416171/) | [GitHub Issues](https://github.com/SajiJohnMiranda/DoCoreAI/discussions)
 
 ---
 ## Optimizations in the PyPI Version  
