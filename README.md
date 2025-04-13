@@ -381,7 +381,7 @@ DoCoreAI is licensed under the [MIT License](https://github.com/SajiJohnMiranda/
 To explore licensing, contact **sajijohnmiranda@gmail.com**.
 
 ---
-## ⚠️ Known Issues - *Work-In-Progress*
+## ⚠️ Known Lacking Features - *Work-In-Progress*
 
 ### 🚧 Memory Window Context Code - Work in Progress
 The **memory window context** feature is currently under development.  
