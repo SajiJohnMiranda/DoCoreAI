@@ -402,7 +402,6 @@ How to Disable Telemetry: To disable telemetry, set the following in your .env f
 
 ```
 DOCOREAI_TELEMETRY=False
-
 ```
 We respect your privacy! If you have concerns, feel free to disable it.
 
