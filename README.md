@@ -68,11 +68,13 @@ DoCoreAI Lab is an independent research initiative focused on **dynamic prompt o
 - Collaborations with researchers, open-source contributors, and companies  
 - Exploratory conversations with incubators or AI investors  
 
+📬 Contact: [email](mailto:sajijohnmiranda@gmail.com) | [LinkedIn](https://www.linkedin.com/in/saji-john-979416171/)
+
 
 ## 🗺️ Public Roadmap (Early View)
 | Phase | Focus |
 |-------|-------|
-| ✅ **Q1 2025** | Launched DoCoreAI on PyPI & Product Hunt |
+| ✅ **Q1 2025** | Launched DoCoreAI on PyPI |
 | 🔄 **Q2 2025** | Evaluation suite (DoCoreAI Pulse), token profiler, role-based tuning |
 | 🔜 **Q3 2025** | Launch interactive web dashboard + SaaS preview |
 | 📣 Future | Open evaluation leaderboard, plugin ecosystem for agents |
