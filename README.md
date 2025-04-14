@@ -50,6 +50,36 @@ It dynamically adjusts **reasoning**, **creativity**, **precision**, and **tempe
 - 📝 Reflection Blog: [25 Days of DoCoreAI](https://mobilights.medium.com/25-days-of-docoreai-a-reflection-on-the-journey-so-far-f832c1210996)  
 
 ---
+## 🔬 DoCoreAI Lab – Research Vision  
+DoCoreAI Lab is an independent research initiative focused on **dynamic prompt optimization, LLM evaluation, and token-efficiency in GenAI systems**.
+
+### We believe that:  
+- **AI responses can be smarter** when intelligence is dynamically profiled instead of hardcoded via prompts.  
+- **Evaluation should be real-time and role-aware**, just like how humans adapt in different contexts.  
+- **Token waste is solvable**, and we’re on a mission to show how optimization can lower cost without compromising quality.  
+
+🔍 **Current Focus Areas**  
+- Dynamic temperature tuning based on role-context (Precision, Reasoning, Creativity)  
+- Cost profiling & token-efficiency evaluation  
+- Benchmarks (MMLU, HumanEval, Dahoas, etc.) to validate optimization methods  
+- Building toward a future product: **DoCoreAI Pulse**  
+
+🤝 **We’re open to**  
+- Collaborations with researchers, open-source contributors, and companies  
+- Exploratory conversations with incubators or AI investors  
+
+
+## 🗺️ Public Roadmap (Early View)
+| Phase | Focus |
+|-------|-------|
+| ✅ **Q1 2025** | Launched DoCoreAI on PyPI & Product Hunt |
+| 🔄 **Q2 2025** | Evaluation suite (DoCoreAI Pulse), token profiler, role-based tuning |
+| 🔜 **Q3 2025** | Launch interactive web dashboard + SaaS preview |
+| 📣 Future | Open evaluation leaderboard, plugin ecosystem for agents |
+
+
+
+---
 
 ## 🚀 A New Era in AI Optimization  
 DoCoreAI **redefines AI interactions** by dynamically optimizing reasoning, creativity, and precision—bringing human-like cognitive intelligence to LLMs for smarter, cost-efficient responses.
