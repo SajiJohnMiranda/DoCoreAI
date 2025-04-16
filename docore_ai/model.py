@@ -35,26 +35,24 @@ def intelligence_profiler(user_content: str, role: str, model_provider: str = MO
 
 
     system_message = f"""
-        You are an expert AI assistant. First, analyze the user query and determine optimal intelligence parameters:
-        - Reasoning (0.1-1.0): Logical depth
-        - Creativity (0.1-1.0): Imagination level
-        - Precision (0.1-1.0): Specificity required
-        - Openness (0.1-1.0): Imagination level, Creativity, Abstractness.
-        - Rigor (0.1-1.0): Logical analysis, Precision, Exactness.        
+        You are a system prompt profiler. Analyze the user input and estimate what temperature setting would best match the tone, ambiguity, and specificity of the request.
+        Return the estimated temperature value only, between 0.1 and 1.0, based on the following:
+        - Low temperature (~0.1–0.3): Precise, factual, deterministic answers.
+        - Medium temperature (~0.4–0.6): Balanced creativity and reasoning.
+        - High temperature (~0.7–1.0): Creative, open-ended, speculative, or abstract.
 
-        Based on these values, **derive the Temperature dynamically** as follows:
-        - **calculate Temperature using the formula:** → **Temperature = clamp( (Openness+Creativity)/2 × 0.7 - (Rigor+Reasoning)/2 × 0.6 + 0.5, 0.1, 1.0)
-        - If **Precision is high (≥0.8) and Reasoning is low (≤0.3)** → **Temperature = 0.2 to 0.3** 
-        - If **Precision is high (≥0.8) and Creativity is low (≤0.2)** → **Temperature = 0.1 to 0.3**
-        
-        You MUST generate responses using the derived temperature value dynamically, ensuring coherent and informative response with the intelligence profile.
-        Then, generate a response based on these parameters. 
+        You MUST generate responses using the estimated temperature.
+        The response must be coherent and informative
 
         Return **ONLY** the following JSON format:  
         {{
             "optimized_response": "<AI-generated response>",
-            "intelligence_profile": {{ "reasoning": <value>, "creativity": <value>, "precision": <value>, "temperature": <value> # Internally used}}
+            {{ "temperature": <value>}}
         }}
+    """
+    user_message = f"""
+    User Request: "{user_content}"
+    Role: "{role}"
     """
     user_message = f"""
     User Request: "{user_content}"
@@ -315,27 +313,6 @@ https://pypi.org/project/docoreai/  -- docoreai 0.2.4
         }}
     """
 
-    #Version 0.3.1 :11-04-2025 - Best
-    system_message = f"""
-        You are a system prompt profiler. Analyze the user input and estimate what temperature setting would best match the tone, ambiguity, and specificity of the request.
-        Return the estimated temperature value only, between 0.1 and 1.0, based on the following:
-        - Low temperature (~0.1–0.3): Precise, factual, deterministic answers.
-        - Medium temperature (~0.4–0.6): Balanced creativity and reasoning.
-        - High temperature (~0.7–1.0): Creative, open-ended, speculative, or abstract.
-
-        You MUST generate responses using the estimated temperature.
-        The response must be coherent and informative
-
-        Return **ONLY** the following JSON format:  
-        {{
-            "optimized_response": "<AI-generated response>",
-            {{ "temperature": <value>}}
-        }}
-    """
-    user_message = f"""
-    User Request: "{user_content}"
-    Role: "{role}"
-    """
-
+    
 
 '''
