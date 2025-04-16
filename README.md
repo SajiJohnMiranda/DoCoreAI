@@ -9,7 +9,7 @@
 ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  
 ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  
 [![GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  
-[![License](https://img.shields.io/github/license/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE.md)
+[![License.md](https://img.shields.io/github/license/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE.md)
 ---
 
 ## 🔬 What is DoCoreAI?  
