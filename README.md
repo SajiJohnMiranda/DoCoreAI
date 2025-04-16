@@ -8,8 +8,8 @@
 ![🔥 Downloads ](https://img.shields.io/pypi/dm/docoreai)  
 ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  
 ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  
-[![GitHub Stars](https://img.shields.io/github/stars/mobilights/DoCoreAI)](https://github.com/mobilights/DoCoreAI)
-[![License](https://img.shields.io/github/license/mobilights/DoCoreAI)](https://github.com/mobilights/DoCoreAI/blob/main/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/sajijohnmiranda/DoCoreAI)
+[![License](https://img.shields.io/github/license/sajijohnmiranda/DoCoreAI)](https://github.com/sajijohnmiranda/DoCoreAI/blob/main/LICENSE)
 ---
 
 ## 🔬 What is DoCoreAI?  
