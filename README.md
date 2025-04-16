@@ -5,7 +5,7 @@
 #### **Optimize LLM Responses Dynamically | Reduce Cost | Boost Intelligence | Improve Relevance**  
 
 ---
-[![🔥 Downloads](https://static.pepy.tech/badge/docoreai)](https://pepy.tech/project/docoreai)
+🔥 [![Downloads](https://static.pepy.tech/badge/docoreai)](https://pepy.tech/project/docoreai)  
 ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  
 ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  
 [![⭐ GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  
