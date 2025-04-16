@@ -295,8 +295,8 @@ Quick test [Sample Code](https://github.com/SajiJohnMiranda/DoCoreAI/tree/main/t
 🎉 **You're all set to build smarter AI applications!**  
 
 ---
-🤝 Collaborate
-DoCoreAI is an active research initiative. If you're:
+🤝 How to Collaborate
+DoCoreAI is an open research initiative. If you're:
 
 - A researcher or developer interested in LLM evaluation  
 - A startup building GenAI tools  
