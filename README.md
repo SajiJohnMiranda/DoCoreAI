@@ -9,7 +9,7 @@
 ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  
 ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  
 [![GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  
-[![License.md](https://img.shields.io/github/license/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE.md)
+[![License](https://img.shields.io/github/license/sajijohnmiranda/DoCoreAI)](LICENSE)
 ---
 
 ## 🔬 What is DoCoreAI?  
@@ -64,7 +64,7 @@ DoCoreAI Lab is an independent research initiative focused on **dynamic prompt o
 - Dynamic temperature tuning based on role-context (Precision, Reasoning, Creativity)  
 - Cost profiling & token-efficiency evaluation  
 - Benchmarks (MMLU, HumanEval, Dahoas, etc.) to validate optimization methods  
-- Building toward a future product: **DoCoreAI Pulse**  
+- Building toward a future product: **[DoCoreAI Pulse](https://github.com/SajiJohnMiranda/DoCoreAI-Pulse)**  
 
 🤝 **We’re open to**  
 - Collaborations with researchers, open-source contributors, and companies  
@@ -77,7 +77,7 @@ DoCoreAI Lab is an independent research initiative focused on **dynamic prompt o
 | Phase | Focus |
 |-------|-------|
 | ✅ **Q1 2025** | Launched DoCoreAI on PyPI |
-| 🔄 **Q2 2025** | Evaluation suite (DoCoreAI Pulse), token profiler, role-based tuning |
+| 🔄 **Q2 2025** | Evaluation suite ([DoCoreAI Pulse](https://github.com/SajiJohnMiranda/DoCoreAI-Pulse)), token profiler, role-based tuning |
 | 🔜 **Q3 2025** | Launch interactive web dashboard + SaaS preview |
 | 📣 Future | Open evaluation leaderboard, plugin ecosystem for agents |
 
