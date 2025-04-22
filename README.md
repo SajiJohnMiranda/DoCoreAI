@@ -61,7 +61,7 @@ DoCoreAI Lab is an independent research initiative focused on **dynamic prompt o
 
 🔍 **Current Focus Areas**  
 - Dynamic temperature tuning based on role-context (Precision, Reasoning, Creativity)  
-- Cost profiling & token-efficiency evaluation  
+- Cost profiling & token-efficiency evaluation:-> [View Sheet (Work In Progress)](https://docs.google.com/spreadsheets/d/1ZOQswSkXSX5LVGIuV_P85pfn6jm76uM0iG9R6jng3Q0/edit?usp=sharing) 
 - Benchmarks (MMLU, HumanEval, Dahoas, etc.) to validate optimization methods  
 - Building toward a future product: **[DoCoreAI Pulse](https://github.com/SajiJohnMiranda/DoCoreAI-Pulse)**  
 
