@@ -410,7 +410,7 @@ Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI 
 ---
 
 ## ⚖️ License
-DoCoreAI is licensed under the [MIT License](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE). 
+DoCoreAI is licensed under the [MIT License](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE).  
 📩 For Partnerships or Implementation support, contact: **sajijohnmiranda@gmail.com**.
 
 ---
