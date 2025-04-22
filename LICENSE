@@ -1,4 +1,4 @@
-# 📄 DoCoreAI License – MIT Core + Commercial Distribution Terms
+# 📄 MIT License
 
 ## 1. Open Source Licensing (MIT)
 
@@ -15,25 +15,21 @@ Your use of the source code is fully governed by the MIT License outlined below.
 
 ## 2. Installer and Packaged Distribution Terms
 
-While the **source code remains MIT-licensed**, use of **official DoCoreAI builds, installers, hosted APIs**, or other **pre-packaged distributions** is subject to **additional commercial terms**.
-
-### 🚫 You may **not** use official DoCoreAI installers or builds to:
-- ❌ Deploy within a commercial SaaS product or platform without prior agreement  
-- ❌ Integrate into enterprise software distributed to clients or users  
-- ❌ Repackage or resell the official DoCoreAI distribution under your own branding
-
-To enable fair use and sustainability, these packaged distributions are governed separately from the MIT-licensed source.
+### 🚫 You may use official DoCoreAI installers or builds to:
+- Deploy within a commercial SaaS product or platform
+- Integrate into enterprise software distributed to clients or users  
+- ❌ Not Repackage or resell the official DoCoreAI distribution under your own branding
 
 ---
 
-## 3. Commercial Licensing
+## 3. Support
 
 If you plan to:
 - 💼 Use DoCoreAI in enterprise environments
 - 🌐 Embed it in SaaS tools or automation platforms
 - 🧠 Use the DoCoreAI engine in agent-based orchestration for external users
 
-📩 Please contact us to obtain a **custom commercial license**:
+📩 Please contact us for developer customization or implementation support
 **sajijohnmiranda@gmail.com**
 
 We are open to partnerships, dual-licensing models, and sustainable collaborations.
