@@ -5,7 +5,7 @@
 #### **Optimize LLM Responses Dynamically | Reduce Cost | Boost Intelligence | Improve Relevance**  
 
 ---
-[![🔥 Downloads](https://static.pepy.tech/badge/docoreai)](https://pepy.tech/project/docoreai)  · ──── ·  ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  · ──── ·  ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  · ──── ·  [![⭐ GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  · ──── ·  [![🧾 License](https://img.shields.io/badge/license-MIT-green)](LICENSE)  
+[![🔥 Downloads](https://static.pepy.tech/badge/docoreai)](https://pepy.tech/project/docoreai)  · ──── ·  ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  · ──── ·  ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  · ──── ·  [![⭐ GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  · ──── ·  [![🧾 License](https://img.shields.io/badge/license-MIT-green)](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE)  
 
 
 
@@ -326,7 +326,7 @@ We’re actively looking for passionate testers to help validate DoCoreAI across
 ### How You Can Contribute as a Tester 
 🔹 **Evaluate, don’t just debug** – You’re here to analyze how well DoCoreAI optimizes prompts compared to standard inputs and help fine-tune its intelligence.  
 🔹 **Test with different LLMs** – Clone or fork the repo, run tests, and submit a pull request (PR) with observations & comparisons.  
-Details at [CONTRIBUTING-TESTERS.md](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/CONTRIBUTING-TESTERS.md)
+Details at [CONTRIBUTING-TESTERS.md](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/CONTRIBUTING-TESTERS.md)  
 🔹 **Ask for guidance** – Need help setting up the test environment? Reach out at sajijohnmiranda@gmail.com or [Whatsapp](https://wa.me/+919663522720) – happy to assist!  
 
 🚀Join our growing community and help shape the future of AI-driven prompt optimization!  
