@@ -1,6 +1,6 @@
 ![DoCoreAI Banner](https://raw.githubusercontent.com/SajiJohnMiranda/DoCoreAI/main/assets/DoCoreAI-Github-header-image.jpg)
 
-# 🚀 DoCoreAI – [Fine-Tune-Free LLM Optimization Engine]  
+# DoCoreAI – [Fine-Tune-Free LLM Optimization Engine]  
 
 #### **Optimize LLM Responses Dynamically | Reduce Cost | Boost Intelligence | Improve Relevance**  
 
