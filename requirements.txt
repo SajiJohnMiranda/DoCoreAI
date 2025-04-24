@@ -5,3 +5,5 @@ openai
 pydantic
 python-dotenv
 groq
+tiktoken
+requests

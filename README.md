@@ -45,7 +45,7 @@ It dynamically adjusts **reasoning**, **creativity**, **precision**, and **tempe
 ---
 ## 📈 Milestones
 
-- 🧪 8200+ PyPI downloads within 30 days  
+- 🧪 10,000+ PyPI downloads within 40 days  
 - 🚀 Launched on [Product Hunt](https://www.producthunt.com/posts/docoreai)  
 - 🧠 Active experiments: MMLU, HumanEval, Dahoas synthetic comparisons  
 - 📝 Reflection Blog: [25 Days of DoCoreAI](https://mobilights.medium.com/25-days-of-docoreai-a-reflection-on-the-journey-so-far-f832c1210996)  

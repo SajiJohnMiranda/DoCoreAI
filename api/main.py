@@ -55,6 +55,26 @@ def normal_prompt_live(request: PromptRequest):
     return {"normal_response":normal_prompt_response}
 
 
+class PromptRequestAdvanced(BaseModel):
+    user_content: str
+    role: Optional[str] = None
+    model_provider: Optional[str] = "openai"
+    model_name: Optional[str] = "gpt-3.5-turbo"
+    show_token_usage: Optional[bool] = True
+    token: Optional[str] = None
+@app.post("/intelligence_profiler_advanced", summary="Advanced profiling with manual token")
+def prompt_live_intelli_profiler_advanced(request: PromptRequestAdvanced):
+    
+    optimal_response = intelligence_profiler(
+        user_content=request.user_content,
+        role=request.role,
+        model_provider=request.model_provider,
+        model_name=request.model_name,
+        show_token_usage=request.show_token_usage,
+        token=request.token  # new!
+    )
+    return {"optimal_response": optimal_response}
+
 
 class DemoPromptRequest(BaseModel):
     user_content: str = Field(..., example="Can you walk me through how to connect my laptop to this new network?")

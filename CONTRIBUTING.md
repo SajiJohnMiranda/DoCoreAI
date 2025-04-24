@@ -49,11 +49,11 @@ git push origin feature-name
 5. Click "Create Pull Request".
 
 ---
-
 🚨 Important Rules from the Ruleset:  
 ✅ At least 1 approval is required before merging.  
-✅ If new changes are pushed after approval, a fresh review is needed.  
-✅ Only PR-based merges are allowed (no direct pushes to main).
+✅ If new changes are pushed after approval, a fresh review is needed.   
+✅ Only PR-based merges are allowed (no direct pushes to main).  
+
 ---
 ## 📢 6. Wait for Review & Merge
 A project maintainer will review your PR.

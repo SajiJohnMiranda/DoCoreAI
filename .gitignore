@@ -24,3 +24,10 @@ saas.py
 19-03-III-Backup-model.py
 formula-model.py
 interpolate-model.py
+mmlu.py
+mmlu
+
+evals/*
+!evals/Cosine Eval/
+!evals/Cosine Eval/cosine.py
+

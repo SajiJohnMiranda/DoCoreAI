@@ -2,11 +2,26 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
             "name": "Python: Uvicorn",
             "type": "python",
             "request": "launch",
             "module": "uvicorn",
-            "args": ["api.main:app", "--host", "127.0.0.1", "--port", "8000", "--reload"],
+            "args": [
+                "api.main:app",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "8000",
+                "--reload"
+            ],
             "console": "integratedTerminal",
             "justMyCode": true
         }
