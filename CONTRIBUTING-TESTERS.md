@@ -38,3 +38,26 @@ Install Python if not already installed: https://www.python.org/downloads/
 In your terminal, run:
 ```bash
 pip install docoreai
+
+---
+
+Download sample test script: https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/tests/Quick%20Test/test.py
+
+---
+
+### Create a .env file in your test directory:
+
+```
+# .env
+OPENAI_API_KEY="your-openai-api-key"
+GROQ_API_KEY="your-groq-api-key"
+MODEL_PROVIDER="openai"         # Choose 'openai' or 'groq'
+MODEL_NAME="gpt-3.5-turbo"      # Or use groq model: gemma2-9b-it
+
+```
+
+### Run Your Test
+```
+python test.py
+
+```
