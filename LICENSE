@@ -1,47 +1,39 @@
-# 📄 MIT License
+## 1. Licensing (CC BY-NC-ND 4.0)
 
-## 1. Open Source Licensing (MIT)
+The **DoCoreAI source code, installer, and all assets** are licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** license.
 
-The **core source code** of **DoCoreAI** is released under the [MIT License](#mit-license).
+You are free to:
+- ✅ Use the software for **personal, non-commercial purposes**
+- ✅ Share it in **unmodified** form with attribution
 
-You are **free to:**
-- ✅ Use, copy, modify, and distribute the source code
-- ✅ Incorporate it into personal, academic, and commercial projects
-- ✅ Build upon it and contribute improvements
+You may **not**:
+- ❌ Modify or create derivative works
+- ❌ Use it for commercial purposes (including internal business use)
+- ❌ Repackage, rebrand, or redistribute modified versions
 
-Your use of the source code is fully governed by the MIT License outlined below.
-
----
-
-## 2. Installer and Packaged Distribution Terms
-
-### You may use official DoCoreAI installers or builds to:
-- Deploy within a commercial SaaS product or platform
-- Integrate into enterprise software distributed to clients or users  
-- ❌ Not Repackage or resell the official DoCoreAI distribution under your own branding
+License details: https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 ---
 
-## 3. Support
+## 2. Installer and Distribution Terms
 
-If you plan to:
-- 💼 Use DoCoreAI in enterprise environments
-- 🌐 Embed it in SaaS tools or automation platforms
-- 🧠 Use the DoCoreAI engine in agent-based orchestration for external users
+You may use the official DoCoreAI installer for:
+- Personal and educational purposes
+- Evaluation in non-commercial research settings
 
-📩 Please contact us for developer, customization or implementation support
-**sajijohnmiranda@gmail.com** / Phone: +919663522720
-
-We are open to partnerships, dual-licensing models, and sustainable collaborations.
+Commercial use, repackaging, resale, or bundling into SaaS products is **prohibited** under this license. For commercial licensing, contact: **sajijohnmiranda@gmail.com**
 
 ---
 
-## 4. Contributions
+## 3. Commercial Use and Licensing Inquiries
 
-We welcome all contributions!  
-By submitting a pull request, you agree that:
-- ✅ Your contributions will be MIT-licensed  
-- ✅ They may be included in both open-source and commercially distributed builds of DoCoreAI
+If you want to:
+- 💼 Use DoCoreAI in a business or enterprise context
+- 🌐 Embed it in a commercial SaaS product
+- 🧠 Integrate it into tools for external clients or users
+
+📩 Contact us for licensing or partnership opportunities:
+**sajijohnmiranda@gmail.com**
 
 ---
 
@@ -52,11 +44,7 @@ The maintainers are **not liable** for any damages arising from its use.
 
 ---
 
-## MIT License
-Copyright (c) 2025 Saji John Miranda
+## 4. Disclaimer of Warranty
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+This software is provided “as is,” without warranties of any kind.  
+The authors are not liable for any damages arising from its use or misuse.
