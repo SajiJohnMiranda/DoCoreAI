@@ -36,9 +36,11 @@ We're offering **complimentary Pro plan access** (SaaS version of DoCoreAI) to t
 Install Python if not already installed: https://www.python.org/downloads/
 
 In your terminal, run:
-```bash
+
+```
 pip install docoreai
 
+```
 ---
 
 Download sample test script: https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/tests/Quick%20Test/test.py
