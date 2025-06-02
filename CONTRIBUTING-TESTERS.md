@@ -47,7 +47,7 @@ Download sample test script: https://github.com/SajiJohnMiranda/DoCoreAI/blob/ma
 
 ---
 
-### Create a .env file in your test directory:
+### 2. Create a .env file in your test directory:
 
 ```
 # .env
@@ -58,8 +58,24 @@ MODEL_NAME="gpt-3.5-turbo"      # Or use groq model: gemma2-9b-it
 
 ```
 
-### Run Your Test
+### 3. Run Your Test
 ```
 python test.py
 
 ```
+
+---
+## 🗣️ How to Share Feedback
+Choose one or more of the following:   
+
+- ✉️ Email your bugs and suggestions to: info@docoreai.com  
+
+- 🐛 Open a GitHub Issue if your feedback applies to the public CLI - https://github.com/SajiJohnMiranda/DoCoreAI/discussions
+
+---
+## 🙌 Thank You   
+Your testing helps ensure DoCoreAI performs reliably across models and use cases.   
+Together, we’re improving how developers interact with LLMs.
+
+For quick support, contact:   
+📧 info@docoreai.com
