@@ -5,7 +5,7 @@
 #### **Optimize LLM Responses Dynamically | Reduce Cost | Boost Intelligence | Improve Relevance**  
 
 ---
-[![🔥 Downloads](https://static.pepy.tech/badge/docoreai)](https://pepy.tech/project/docoreai)  · ──── ·  ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  · ──── ·  ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  · ──── ·  [![⭐ GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  · ──── ·  [![🧾 License](https://img.shields.io/badge/license-MIT-green)](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE)  
+[![🔥 Downloads](https://static.pepy.tech/badge/docoreai)](https://pepy.tech/project/docoreai)  · ──── ·  ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  · ──── ·  ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  · ──── ·  [![⭐ GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  · ──── ·  [![🧾 License](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0-blue)](https://creativecommons.org/licenses/by-nc-nd/4.0/)  
 
 
 
@@ -410,8 +410,21 @@ Our vision is to make DoCoreAI adaptable to both proprietary and open-source AI 
 ---
 
 ## ⚖️ License
-DoCoreAI is licensed under the [MIT License](https://github.com/SajiJohnMiranda/DoCoreAI/blob/main/LICENSE).  
-📩 For Partnerships or Implementation support, contact: **sajijohnmiranda@gmail.com**.
+DoCoreAI is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+This license **allows personal and academic use only**. Commercial use, modification, or redistribution **requires prior permission**.
+📩 For business or licensing inquiries: / Partnerships or Implementation support, contact: **sajijohnmiranda@gmail.com**.
+
+---
+
+## 📜 License Overview
+
+| Usage Type             | Allowed Under CC BY-NC-ND 4.0? |
+|------------------------|-------------------------------|
+| 🧪 Personal or Academic Use | ✅ Yes                      |
+| 🔄 Modify or Derivative Works | ❌ No                    |
+| 💼 Commercial Use or SaaS Integration | ❌ Not Allowed Without License |
+| 🚀 Internal Business Prototyping | ⚠️ Contact for Evaluation License |
+| 📝 Redistribution        | ❌ No                        |
 
 ---
 ## ⚠️ Known Lacking Features - *Work-In-Progress*
