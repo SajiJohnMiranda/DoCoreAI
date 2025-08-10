@@ -1,11 +1,18 @@
 ![DoCoreAI Banner](https://raw.githubusercontent.com/SajiJohnMiranda/DoCoreAI/main/assets/DoCoreAI-Github-header-image.jpg)
 
-# DoCoreAI – [Fine-Tune-Free LLM Optimization Engine]  
+# DoCoreAI – AI Prompt Optimization Engine (Developer Edition)
 
-#### **Optimize LLM Responses Dynamically | Reduce Cost | Boost Intelligence | Improve Relevance**  
+**Optimize LLM prompts • Tune temperature • Reduce LLM cost • Maximize OpenAI efficiency**
+
+DoCoreAI offers a streamlined, open‑source toolkit for prompt engineering and GPT optimization. Built for developers, this version includes core APIs and libraries —without SaaS features like dashboards. For the full experience (metrics, dashboards), explore our [website](https://docoreai.com).
 
 ---
-[![🔥 Downloads](https://static.pepy.tech/badge/docoreai)](https://pepy.tech/project/docoreai)  · ──── ·  ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)  · ──── ·  ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)  · ──── ·  [![⭐ GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)  · ──── ·  [![🧾 License](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0-blue)](https://creativecommons.org/licenses/by-nc-nd/4.0/)  
+
+---
+[![🔥 Downloads](https://static.pepy.tech/badge/docoreai)](https://pepy.tech/project/docoreai)   |   ![📦 Latest Version](https://img.shields.io/pypi/v/docoreai)   |   ![🐍 Python Compatibility](https://img.shields.io/pypi/pyversions/docoreai)   |   [![⭐ GitHub Stars](https://img.shields.io/github/stars/sajijohnmiranda/DoCoreAI)](https://github.com/SajiJohnMiranda/DoCoreAI/stargazers)   |   [![🧾 License](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0-blue)](https://creativecommons.org/licenses/by-nc-nd/4.0/)  |  
+[![📊 View Reports](https://img.shields.io/badge/📊_View_Reports-Dashboard_Insights-brightgreen)](https://docoreai.com/pypi-downloads-docoreai-dashboard-insights/)
+ 
+> 📊 **See how much time, tokens & money you're saving with DoCoreAI's live insights dashboard**
 
 
 
@@ -18,6 +25,22 @@
 It dynamically adjusts **reasoning**, **creativity**, **precision**, and **temperature** based on context and user role — so your AI agents respond with intelligence tailored to the task.
 
  Whether you're building a support assistant, a creative co-pilot, or a data analyst bot — DoCoreAI ensures clear, cost-effective, and context-aware responses every time.
+
+---
+## 🧩 DoCoreAI: Developer Edition vs [SaaS Edition](https://docoreai.com)
+
+Understand the difference between the open-source Developer Edition (available on GitHub) and the full-featured SaaS Edition (available at [docoreai.com](https://docoreai.com)).
+
+| Feature / Capability                              | **Developer Edition (GitHub)**                                       | **SaaS Edition (docoreai.com)**                                                                 |
+|---------------------------------------------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Temperature Optimization**                      | Demonstrates how temperature tuning works in code                    | Dynamically adjusts temperature between first and second LLM calls to reflect real impact       |
+| **Prompt Strategy**                               | Uses *self-reflection prompting* to estimate ideal temperature       | Same approach, but applies the estimated value in a second call for accurate optimization       |
+| **Dashboard & Reports**                           | Not included                                                         | Includes dashboard with reports: *Developer Time Saved*, *Token Waste*, *Cost Savings*, etc.    |
+| **Target Users**                                  | Developers testing prompt behavior                                   | Teams, product leads, and senior managers improving AI cost and efficiency                      |
+| **Prompt Logging**                                | Prompts not saved; used only in memory                               | Same — with an added feature to locally save prompts for developer inspection                   |
+| **Role-Based Prompting**                          | ✅ Supported                                                         | ✅ Supported                                                                                      |
+
+> 💡 Both versions share the same base logic but differ in how deeply they optimize and visualize prompt performance.
 
 ---
 
@@ -39,7 +62,7 @@ It dynamically adjusts **reasoning**, **creativity**, **precision**, and **tempe
 
 - `intelligence_profiler()` – Adjusts generation parameters intelligently per request  
 - `token_profiler()` – Audits cost, detects bloat, and suggests savings  
-- `DoCoreAI Pulse` – Test runner for benchmarking DoCoreAI against baselines  
+- `DoCoreAI Pulse` – Test runner for benchmarking DoCoreAI against baselines  	
 - Support for evaluating with MMLU, HumanEval, and synthetic prompt-response datasets  
 
 ---
